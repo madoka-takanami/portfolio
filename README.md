@@ -88,6 +88,7 @@ Figma：https://www.figma.com/file/YKapNsOli55UySFSUrTUS5/%E3%83%9D%E3%83%BC%E3%
 - [x] パスワード
 
 ### ER図
+
 <img src="erd.drawio.svg">
 
 エンティティ  
@@ -106,65 +107,60 @@ Figma：https://www.figma.com/file/YKapNsOli55UySFSUrTUS5/%E3%83%9D%E3%83%BC%E3%
 飲食店は複数のスポットに紐づく  
 飲食店は複数の行ったよボタンを持つ  
 
-
-フォローユーザーは1人のユーザーに紐ついている  
-フォロ-ユーザーは複数の飲食店を持てる  
+ユーザーは複数のユーザーをフォローできる
+ユーザーは複数のユーザーにフォローされる 
 
 行ったよボタンは複数の飲食店に紐づく  
-行ったよボタンは複数のユーザーに紐づく  
+行ったよボタンは複数のフォローユーザーに紐づく  
 
 スポットは一つの飲食店に紐づく  
 
 
-| ユーザーテーブル[User]           |                 |          |                         |                       |
-|--------------------------|-----------------|----------|-------------------------|-----------------------|
-|                          | id              | bigint   |                         |                       |
-| ニックネーム                   | name            | string   | not null                |                       |
-| メール                      | e-mail          | string   | unique: true, not null  |                       |
-| 年代                       | generation      | string   |                         |                       |
-| 職業or一言                   | introduction    | string   |                         |                       |
-| パスワード                    | password        | string   | not null                |                       |
-| パスワード確認                  | password_digest | string   | not null                |                       |
-| アバター                     | avator          | string   |                         |                       |
-| メール通知                    | notion          | boolean  | default: true, not null |                       |
-| 飲食店                      | restaurant_id   | string   | foreign_key             | has_many :restaurant  |
-| フォローユーザー                 | follow_user_id  | string   | foreign_key             | has_many :follow_user |
-| 行ったよボタン                  | gone_id         | string   | foreign_key             | has_many :gone        |
-|                          |                 |          |                         |                       |
-|                          |                 |          |                         |                       |
-| 飲食店テーブル[Restaurant]      |                 |          |                         |                       |
-|                          | id              | bigint   |                         |                       |
-| カテゴリアイコン                 | restaurant_type | string   |                         |                       |
-| 店舗名                      | restaurant      | string   | not null                |                       |
-| 場所                       | place           | string   | not null                |                       |
-| 特徴                       | feature         | string   |                         |                       |
-| メモ                       | memo            | string   | maximum: 300            |                       |
-| ユーザー                     | user_id         | integer  | references :user        | belong_to :user       |
-| スポット                     | spot_id         | integer  | foreign key             | has_one :spot         |
-| 行ったよボタン                  | gone_id         | integer  | foreign key             | has_many :gone        |
-| フォローユーザー                 | follow_user     | integer  | foreign key             | has_many :follow_user |
-|                          |                 |          |                         |                       |
-| スポットテーブル[Spot]           |                 |          |                         |                       |
-|                          | id              | bigint   |                         |                       |
-| 緯度                       | latitude        | float    | not null                |                       |
-| 経度                       | longitude       | float    | not null                |                       |
-| 飲食店                      | restaurant_id   | integer  | references :restaurant  | belong_to :restaurant |
-|                          |                 |          |                         |                       |
-|                          |                 |          |                         |                       |
-| フォローユーザーテーブル[FollowUser] |                 |          |                         |                       |
-|                          | id              | bigint   |                         |                       |
-| ユーザー                     | user_id         | string   | references :user        | belong_to :user       |
-| 飲食店                      | restaurant_id   | string   | references :restaurant  | belong_to :restaurant |
-|                          |                 |          |                         |                       |
-|                          |                 |          |                         |                       |
-| 行ったよボタンテーブル[Gone]        |                 |          |                         |                       |
-|                          | id              | bigint   |                         |                       |
-| フォローユーザー                 |                 | string   | references :user        | has_many :user        |
-| 飲食店                      | restaurant_id   | string   | references :restaurant  | has_many :restaurant  |
+| ユーザーテーブル[User]                  |                 |          |                               |                        |
+|---------------------------------|-----------------|----------|-------------------------------|------------------------|
+|                                 | id              | bigint   |                               |                        |
+| ニックネーム                          | name            | string   | not null                      |                        |
+| メール                             | e-mail          | string   | unique: true, not null        |                        |
+| 年代                              | generation      | string   |                               |                        |
+| 職業or一言                          | introduction    | string   |                               |                        |
+| パスワード                           | password        | string   | not null                      |                        |
+| パスワード確認                         | password_digest | string   | not null                      |                        |
+| アバター                            | avator          | string   |                               |                        |
+| メール通知                           | notion          | boolean  | default: true, not null       |                        |
+| 飲食店                             | restaurant_id   | string   | foreign_key                   | has_many :restaurant   |
+|                                 |                 |          |                               |                        |
+|                                 |                 |          |                               |                        |
+| 飲食店テーブル[Restaurant]             |                 |          |                               |                        |
+|                                 | id              | bigint   |                               |                        |
+| カテゴリアイコン                        | restaurant_type | string   |                               |                        |
+| 店舗名                             | restaurant      | string   | not null                      |                        |
+| 場所                              | place           | string   | not null                      |                        |
+| 特徴                              | feature         | string   |                               |                        |
+| メモ                              | memo            | string   | maximum: 300                  |                        |
+| ユーザー                            | user_id         | integer  | references :user              | belong_to :user        |
+| スポット                            | spot_id         | integer  | foreign key                   | has_one :spot          |
+|                                 |                 |          |                               |                        |
+| スポットテーブル[Spot]                  |                 |          |                               |                        |
+|                                 | id              | bigint   |                               |                        |
+| 緯度                              | latitude        | float    | not null                      |                        |
+| 経度                              | longitude       | float    | not null                      |                        |
+| 飲食店                             | restaurant_id   | integer  | references :restaurant        | belong_to :restaurant  |
+|                                 |                 |          |                               |                        |
+|                                 |                 |          |                               |                        |
+| フォローユーザーテーブル[UserFollow]        |                 |          |                               |                        |
+|                                 | id              | bigint   |                               |                        |
+| ユーザー                            | user_id         | string   | foreign_key: true             | belong_to :user        |
+| ユーザー                            | follow_id       | string   | foreign_key:{to_table: users} | belong_to :user        |
+|                                 |                 |          |                               |                        |
+|                                 |                 |          |                               |                        |
+| 行ったよボタンテーブル[visited_restaurant] |                 |          |                               |                        |
+|                                 | id              | bigint   |                               |                        |
+| フォローユーザー                        | user_follow_id  | string   | references :user_follow       | belong_to :user_follow |
+| 飲食店                             | restaurant_id   | string   | references :restaurant        | belong_to :restaurant  |
 
-■スケジュール
-  企画〜技術調査：11/13〆切 
-  README〜ER図作成：11/13 〆切 
+　■スケジュール
+  企画〜技術調査：11/13〆切
+  README〜ER図作成：11/13 〆切
   メイン機能実装：11/16 - 12/20
   β版をRUNTEQ内リリース（MVP）：12/21〆切
   本番リリース：12/28
