@@ -14,7 +14,7 @@
     <%= f.text_field :email, placeholder: "e@mail.com",  class: "input input-bordered w-full max-w-xs" %>
 
     <label class="label">
-      <span class="label-text"><%= f.label :generationl %></span>
+      <span class="label-text"><%= f.label :generation %></span>
     </label>
     <%= f.text_field :generation,  class: "input input-bordered w-full max-w-xs" %>
 
@@ -31,5 +31,6 @@
   <br>
   <%= f.submit "登録", class: 'btn btn-primary' %>
   <% end %>
-
 </div>
+<br>
+<%= link_to 'ログインはこちら', login_path, class: "link link-secondary" %>
