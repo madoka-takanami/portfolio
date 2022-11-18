@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: 'users#index'
 
-  resource :users
+  resource :users, only: %i[new create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'login', to: 'user_session#new'
+  post 'login', to: 'user_session#create'
+  delete 'login', to: 'user_session#destroy'
 end
