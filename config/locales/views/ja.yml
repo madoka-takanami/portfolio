@@ -9,10 +9,18 @@ ja:
     new:
       signup: 'ユーザー登録'
       to_login_page: 'ログインはこちら'
+    create:
+      success: '登録しました'
+      fault: 'やり直してください'
   user_session:
     new:
       login: 'ログイン'
       to_register_page: 'ユーザー登録の方はこちら'
       password_forget: 'パスワードをお忘れの方はこちら'
       email: 'メールアドレス'
+    create:
+      success: 'ログインしました'
+      fault: 'ログインに失敗しました'
+    destroy:
+      logout_success: 'ログアウトしました'
   restaurants:
