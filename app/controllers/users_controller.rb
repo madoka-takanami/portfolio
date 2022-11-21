@@ -6,10 +6,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "登録しました"
+      flash[:success] = t('.success')
       redirect_to login_url
     else
-      flash.now[:error] = "やり直し"
+      flash.now[:error] = t('.fault')
       render :new
     end
   end
