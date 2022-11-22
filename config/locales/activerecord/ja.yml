@@ -18,3 +18,12 @@ ja:
         place: '場所'
         feature: '場所'
         memo: 'メモ'
+  enums:
+    user:
+      generation:
+        not_select: ''
+        twenties: '20代'
+        thirties: '30代'
+        forties: '40代'
+        fifties: '50代'
+        over_sixties: '60代以上'
