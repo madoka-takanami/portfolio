@@ -17,16 +17,7 @@
     <label class="label">
       <span class="label-text"><%= f.label :generation %></span>
     </label>
-    <select class="select select-bordered w-full max-w-xs">
-      <option></option>
-      <option>20代</option>
-      <option>30代</option>
-      <option>40代</option>
-      <option>50代</option>
-      <option>60代以上</option>
-    </select>
-
-    </select>
+    <%= f.select :generation, User.generations_i18n.invert, {}, class: "select select-bordered w-full max-w-xs" %>
 
     <label class="label">
       <span class="label-text"><%= f.label :password %></span>
