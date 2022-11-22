@@ -10,32 +10,36 @@
     <tbody>
     -->
       <!-- row 1 -->
+  <%= form_with model: @restaurant, url: { controller: 'restaurants', action: 'create'} do |f| %>
+    <%= render 'shared/error_message', object: f.object %>
       <tr>
         <td>
           <div class="flex items-center space-x-3">
             <div class="avatar">
               <div class="mask mask-squircle w-12 h-12">
-                <% if restaurant.rst_type %>
-                  <%= image_tag "#{restaurant.rst_type}.png", alt: t('default.picture') %>
-                <% else %>
                   <%= image_tag "default.png", alt: t('default.picture') %>
-                <% end %>
               </div>
             </div>
           <div>
         </td>
-        <td><div class="text-xs opacity-90"><%= restaurant.place %></div></td>
-        <td><div class="font-bold"><%= restaurant.rst_name %></div></td>
+        <td><div class="text-xs opacity-90">
+          <%= f.text_field :place, placeholder: t('.place')%>
+        </div></td>
+        <td><div class="font-bold">
+          <%= f.text_field :rst_name, placeholder: t('.rst_name') %>
+        </div></td>
         <td>
           <span class="badge badge-ghost badge-sm">
-            <%= restaurant.feature %>
+            <%= f.text_field :feature, placeholder: t('.feature') %>
           </span>
         </td>
         <td>
           <div class="text-xs" >
-            <%= restaurant.memo %>
+            <%= f.text_field :memo, placeholder: t('.memo') %>
           </div>
         </td>
+        <td><%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %></td>
       </tr>
   </table>
 </div>
+<% end %>

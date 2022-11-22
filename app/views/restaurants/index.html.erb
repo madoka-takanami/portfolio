@@ -1,6 +1,10 @@
-<h1>リスト一覧</h1>
-<% if @restaurants == nil %>
-  <p>保存されているメモは0です</p>
-<% else %>
-  <%= render @restaurants %>
-<% end %>
+<h1><%= t('.title') %></h1><br>
+  <% if @restaurants == [] || nil %>
+    <p><%= t('.not_have_lists') %></p>
+    <%= render 'small_new' %>
+  <% else %>
+    <%= render 'small_new' %>
+    <%= render @restaurants %>
+  <% end %>
+
+  <%= render 'shared/footer' %>

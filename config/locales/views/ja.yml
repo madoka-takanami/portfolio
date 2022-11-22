@@ -5,6 +5,7 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     restaurants_list: 'みんなのリスト'
+    picture: '画像'
   users:
     new:
       signup: 'ユーザー登録'
@@ -24,3 +25,19 @@ ja:
     destroy:
       logout_success: 'ログアウトしました'
   restaurants:
+    index:
+      title: 'リスト一覧'
+      not_have_lists: '保存されているメモは0です'
+    new:
+      rst_name: '店名'
+      place: '場所'
+      feature: '特徴'
+      memo: 'メモ'
+    create:
+      success: '登録しました'
+      fault: 'やり直してください'
+    small_new:
+      rst_name: '店名'
+      place: '場所'
+      feature: '特徴'
+      memo: 'メモ'
