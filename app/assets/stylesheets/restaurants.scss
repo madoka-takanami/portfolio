@@ -10,3 +10,13 @@ td {
   text-align: left;
   border: solid 1px #EAEAE4;
 }
+
+.icon_check {
+  display: block;
+  cursor: pointer;
+}
+
+.icon_check input:checked+label {
+  background: #1a720d;
+  color: #1a720d;
+}

@@ -16,8 +16,8 @@ ja:
         rst_type: '飲食店カテゴリ'
         rst_name: '店名'
         place: '場所'
-        feature: '場所'
-        memo: 'メモ'
+        feature: '特徴'
+        memo: 'マイメモ'
   enums:
     user:
       generation:
