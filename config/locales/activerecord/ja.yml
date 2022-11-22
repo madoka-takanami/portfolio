@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      restaurant: '飲食店'
     attributes:
       user:
         email: 'メールアドレス'
@@ -11,3 +12,18 @@ ja:
         generation: '年代'
         avator: 'アバター'
         notion: 'メール通知'
+      restaurant:
+        rst_type: '飲食店カテゴリ'
+        rst_name: '店名'
+        place: '場所'
+        feature: '場所'
+        memo: 'メモ'
+  enums:
+    user:
+      generation:
+        not_select: ''
+        twenties: '20代'
+        thirties: '30代'
+        forties: '40代'
+        fifties: '50代'
+        over_sixties: '60代以上'

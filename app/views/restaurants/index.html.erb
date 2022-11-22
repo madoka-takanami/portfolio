@@ -1,0 +1,6 @@
+<h1>リスト一覧</h1>
+<% if @restaurants == nil %>
+  <p>保存されているメモは0です</p>
+<% else %>
+  <%= render @restaurants %>
+<% end %>
