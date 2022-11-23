@@ -36,4 +36,4 @@ node_modules
 yarn-debug.log*
 .yarn-integrity
 
-./assets/stylesheets/tailwind_dist.css
+app/assets/stylesheets/tailwind_dist.css

@@ -2,9 +2,9 @@
   <div class="flex-1">
     <%= link_to (t 'defaults.title'), '#',  class: "btn btn-ghost normal-case text-xl" %>
   </div>
-    <div class="navbar-end">
-      <%= link_to (t 'defaults.restaurants_list'), restaurants_path, class: "btn" %>
-    </div>
+  <div class="navbar-end">
+    <%= link_to (t 'defaults.restaurants_list'), restaurants_path, class: "btn" %>
+    <%= link_to 'マイリスト', '#', class: "btn" %>
     <button class="btn btn-ghost btn-circle">
       <%= link_to login_path, method: :delete do %>
         <i class="fa-solid fa-right-from-bracket"></i>
