@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  before_action :set_restaurant, only: %i[show edit update destroy]
   def new
     @restaurant = Restaurant.new
   end
@@ -6,9 +7,9 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = current_user.restaurants.build(restaurant_params)
     if @restaurant.save
-      redirect_to restaurants_path, success: "登録しました"
+      redirect_to restaurants_path, success: t('message.success')
     else
-      flash.now[:error] = "やり直して下さい"
+      flash.now[:error] = t('message.fault')
       render :new
     end
   end
@@ -18,7 +19,24 @@ class RestaurantsController < ApplicationController
     @restaurants = current_user.restaurants
   end
 
-  def edit
+  def show; end
+
+  def edit; end
+
+  def update
+    if @restaurant.update(restaurant_params)
+      redirect_to restaurant_path(params[:id])
+      flash[:success] = t('message.updated')
+    else
+      flash.now[:error] = t('message.fault')
+      render :edit
+    end
+  end
+
+  def destroy
+    @restaurant.destroy
+    redirect_to restaurants_path
+    flash[:success] = t('.success')
   end
 
   private
