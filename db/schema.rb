@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_21_232816) do
+ActiveRecord::Schema.define(version: 2022_11_23_082147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "restaurants", force: :cascade do |t|
-    t.integer "rst_type"
+    t.integer "rst_type", default: 0, null: false
     t.string "rst_name", null: false
     t.string "place"
     t.string "feature"

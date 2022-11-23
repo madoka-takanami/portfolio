@@ -1,0 +1,30 @@
+
+<h1><%= t('.title') %></h1>
+<div class="avatar">
+  <div class="w-24 rounded-full">
+    <%= image_tag ("#{@restaurant.rst_type}.png") %>
+  </div>
+</div>
+<br>
+  <div class="input input-bordered w-full max-w-xs">
+    <%= Restaurant.human_attribute_name(:rst_name) %>:
+    <%= @restaurant.rst_name %>
+  </div>
+
+  <div class="input input-bordered w-full max-w-xs">
+    <%= Restaurant.human_attribute_name(:place) %>:
+    <%= @restaurant.place %>
+  </div>
+
+  <div class="input input-bordered w-full max-w-xs">
+    <%= Restaurant.human_attribute_name(:feature)%>:
+    <%= @restaurant.feature %>
+  </div>
+
+  <div class="input input-bordered w-full max-w-xs">
+    <%= Restaurant.human_attribute_name(:memo) %>:
+    <%= @restaurant.memo %>
+  </div>
+
+  <%= link_to (t '.edit'), edit_restaurant_path(@restaurant.id), class: "btn btn-primary" %>
+  <%= button_to (t '.delete'), restaurant_path(@restaurant.id), method: :delete, class: "btn btn-accent" %>
