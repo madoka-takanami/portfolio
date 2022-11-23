@@ -1,5 +1,5 @@
 <div class="overflow-x-auto w-full">
-  <table class="table w-full">
+  <table class="table w-full sample">
     <!-- head -->
     <!--
     <thead>
@@ -10,7 +10,7 @@
     <tbody>
     -->
       <!-- row 1 -->
-      <tr>
+    <tr data-href="<%= restaurant_path(restaurant.id) %>">
         <td>
           <div class="flex items-center space-x-3">
             <div class="avatar">
@@ -35,6 +35,9 @@
           <div class="text-xs" >
             <%= restaurant.memo %>
           </div>
+        </td>
+        <td>
+          <%= link_to '詳細', restaurant_path(restaurant.id) %>
         </td>
       </tr>
   </table>
