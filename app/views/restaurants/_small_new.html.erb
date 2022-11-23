@@ -22,12 +22,16 @@
             </div>
           <div>
         </td>
-        <td><div class="text-xs opacity-90">
-          <%= f.text_field :place, placeholder: t('.place')%>
-        </div></td>
-        <td><div class="font-bold">
-          <%= f.text_field :rst_name, placeholder: t('.rst_name') %>
-        </div></td>
+        <td>
+          <div class="text-xs opacity-90">
+            <%= f.text_field :place, placeholder: t('.place')%>
+          </div>
+        </td>
+        <td>
+          <div class="font-bold">
+            <%= f.text_field :rst_name, value: "店名" %>
+          </div>
+        </td>
         <td>
           <span class="badge badge-ghost badge-sm">
             <%= f.text_field :feature, placeholder: t('.feature') %>

@@ -6,6 +6,10 @@ ja:
     logout: 'ログアウト'
     restaurants_list: 'みんなのリスト'
     picture: '画像'
+  message:
+    success: '登録しました'
+    updated: '更新しました'
+    fault: 'やり直してください'
   users:
     new:
       signup: 'ユーザー登録'
@@ -41,3 +45,12 @@ ja:
       place: '場所'
       feature: '特徴'
       memo: 'メモ'
+    show:
+      title: 'お店詳細'
+      edit: '編集'
+      delete: '削除'
+    edit:
+      title: 'お店編集'
+      update: '更新'
+    destroy:
+      success: '削除しました'
