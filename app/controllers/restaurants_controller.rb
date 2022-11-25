@@ -7,9 +7,10 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = current_user.restaurants.build(restaurant_params)
     if @restaurant.save
-      redirect_to restaurants_path, success: t('message.success')
+      redirect_to restaurants_path
+      flash[:info] = t('message.success')
     else
-      flash.now[:error] = t('message.fault')
+      flash.now[:warning] = t('message.fault')
       render :new
     end
   end
