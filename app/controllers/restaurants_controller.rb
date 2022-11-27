@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: %i[show edit update destroy]
+
   def new
     @restaurant = Restaurant.new
   end
@@ -17,7 +18,8 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurant = Restaurant.new
-    @restaurants = current_user.restaurants
+    @q = current_user.restaurants.ransack(params[:q])
+    @restaurants = @q.result(distinct: true)
   end
 
   def show; end
