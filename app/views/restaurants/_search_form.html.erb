@@ -1,0 +1,4 @@
+<%= search_form_for @q, url: url do |f| %>
+<%= f.search_field :rst_name_cont, class: "input input-bordered w-full max-w-xs" %>
+<%= f.submit class: 'btn btn-primary' %>
+<% end %>
