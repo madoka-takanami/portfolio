@@ -32,6 +32,7 @@ ja:
     index:
       title: 'リスト一覧'
       not_have_lists: '保存されているメモは0です'
+      random_select: 'ランダムで決める'
     new:
       rst_name: '店名'
       place: '場所'
