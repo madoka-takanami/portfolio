@@ -1,9 +1,12 @@
 <div id="modal" class="modal">
   <div class="modal-content">
     <div class="modal-body">
-      <input type="button" id="closeBtn", class="close-btn btn btn-outline btn-secondary", value="close">
-        <div class="garagara-result fadeUp delay-time" >
-          <%= @random_select.rst_name %>
+      <div class="modal-close-btn">
+        <input type="button" id="closeBtn" class="btn btn-outline btn-secondary" value="close">
+      </div>
+        <div class="garagara-result fadeUp" >
+          <%= "今回はこちらはいかがでしょう！" %><br>
+          <%= "〜  #{ @random_select.rst_name }  〜" %>
         </div>
       <%= video_tag "/assets/videos/garagara.mp4", autoplay: true, muted: true %>
     </div>
