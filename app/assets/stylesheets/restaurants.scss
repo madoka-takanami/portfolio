@@ -1,12 +1,22 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-table {
-  border: solid 1px #EAEAE4;
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-td {
-  width: 60px;
-  text-align: left;
-  border: solid 1px #EAEAE4;
+.modal-content {
+  background-color: white;
+  width: 500px;
+  margin: 40% auto;
 }
