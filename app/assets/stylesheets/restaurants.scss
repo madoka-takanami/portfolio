@@ -17,31 +17,35 @@
 .modal-content {
   background-color: white;
   width: 500px;
-  margin: 40% auto;
+  margin: 10% auto;
+  border-radius: 10px;
+}
+
+.modal-body {
+  position: relative;
+  height: 100px;
 }
 
 .garagara-result {
   opacity: 0;
+  font-weight: bold;
   text-align: center;
-  height: 120px;
-  line-height: 30px;
-  width: 100px;
-  border-radius: 20%;
-}
-
-/*==================================================
-動き自体の指定：今回は「ふわっ」
-===================================*/
-.delay-time {
-  animation-delay: 3s;
+  position: absolute;
+  top: 80px;
+  align-content: center;
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px #bb8b2e, -10px -10px 5px #ffd546;
 }
 
 .fadeUp {
   animation-name: fadeUpAnime;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  background-color: #7BAA17;
+  background-color: #edb03a;
   color: white;
+  animation-delay: 3s;
 }
 
 @keyframes fadeUpAnime {
@@ -53,3 +57,9 @@
     opacity: 1;
   }
 }
+
+//.modal-close-btn {
+//  position: absolute;
+//  top: 0px;
+//  right: 0px;
+//}
