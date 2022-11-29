@@ -3,6 +3,10 @@ module.exports = {
   content: [
     './app/views/**/*.html.erb',
   ],
+  blocklist: [
+    'modal',
+    'modal-bottom',
+  ],
   theme: {
     extend: {},
   },

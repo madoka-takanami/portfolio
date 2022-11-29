@@ -20,6 +20,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new
     @q = current_user.restaurants.ransack(params[:q])
     @restaurants = @q.result(distinct: true)
+    @random_select = @restaurants.shuffle.first
   end
 
   def show; end
