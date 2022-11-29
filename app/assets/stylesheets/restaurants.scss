@@ -1,12 +1,65 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-table {
-  border: solid 1px #EAEAE4;
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-td {
-  width: 60px;
-  text-align: left;
-  border: solid 1px #EAEAE4;
+.modal-content {
+  background-color: white;
+  width: 100%;
+  margin: 10% auto;
+  border-radius: 10px;
 }
+
+.modal-body {
+  position: relative;
+  height: 100px;
+}
+
+.garagara-result {
+  opacity: 0;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 80px;
+  align-content: center;
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px #bb8b2e, -10px -10px 5px #ffd546;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  background-color: #edb03a;
+  color: white;
+  animation-delay: 3s;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+//.modal-close-btn {
+//  position: absolute;
+//  top: 0px;
+//  right: 0px;
+//}

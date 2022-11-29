@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html data-theme="mytheme">
   <head>
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <title>がらぽんごはん</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'mobile', media: 'min-width: 400px', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -18,5 +18,6 @@
     <% end %>
     <%= render 'shared/flash_message' %>
     <%= yield %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
