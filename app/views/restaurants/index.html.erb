@@ -1,13 +1,13 @@
 <h1><%= t('.title') %></h1><br>
-  <%= render 'search_form', url: restaurants_path %>
+  <%= render 'search_form' %>
   <%= render 'random_select' %>
   <input type="button", value= "ランダム", class="btn btn-active btn-secondary", id="btn">
-    <% if @restaurants == [] || nil %>
-      <p><%= t('.not_have_lists') %></p>
-      <%= render 'small_new' %>
-    <% else %>
+    <% if @restaurants.any? %>
       <%= render 'small_new' %>
       <%= render @restaurants %>
+    <% else %>
+      <p><%= t('.not_have_lists') %></p>
+      <%= render 'small_new' %>
     <% end %>
 
   <%= render 'shared/footer' %>

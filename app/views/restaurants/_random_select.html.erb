@@ -5,8 +5,12 @@
         <input type="button" id="closeBtn" class="btn btn-outline btn-secondary" value="close">
       </div>
         <div class="garagara-result fadeUp" >
-          <%= "今回はこちらはいかがでしょう！" %><br>
-          <%= "〜  #{ @random_select.rst_name }  〜" %>
+          <% if @random_select %>
+            <%= "今回はこちらはいかがでしょう！" %><br>
+            <%= "〜  #{ @random_select.rst_name }  〜" %>
+          <% else %>
+            <%= "まだお店が登録されていません！" %>
+          <% end %>
         </div>
       <%= video_tag "/assets/videos/garagara.mp4", autoplay: true, muted: true %>
     </div>
