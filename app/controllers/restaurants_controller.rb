@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: %i[show edit update destroy]
+  before_action :set_restaurant, only: %i[edit update destroy]
 
   def new
     @restaurant = Restaurant.new
@@ -18,12 +18,25 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurant = Restaurant.new
-    @q = current_user.restaurants.ransack(params[:q])
-    @restaurants = @q.result(distinct: true)
+    if params[:set] == "other_list"
+      @other_list = Restaurant.where.not(user_id: current_user.id).ransack(params[:other], search_key: :other)
+      @restaurants = @other_list.result(distinct: true)
+    elsif params[:set] == "my_list"
+      @my_list = current_user.restaurants.ransack(params[:q])
+      @restaurants = @my_list.result(distinct: true)
+    else
+      @other_list= Restaurant.where.not(user_id: current_user.id).ransack(params[:other], search_key: :other)
+      @restaurants = @other_list.result(distinct: true)
+
+      @my_list = current_user.restaurants.ransack(params[:q])
+      @restaurants = @my_list.result(distinct: true)
+    end
     @random_select = @restaurants.shuffle.first
   end
 
-  def show; end
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
 
   def edit; end
 
