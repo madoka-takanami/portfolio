@@ -18,19 +18,8 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurant = Restaurant.new
-    if params[:set] == "other_list"
-      @other_list = Restaurant.where.not(user_id: current_user.id).ransack(params[:other], search_key: :other)
-      @restaurants = @other_list.result(distinct: true)
-    elsif params[:set] == "my_list"
-      @my_list = current_user.restaurants.ransack(params[:q])
-      @restaurants = @my_list.result(distinct: true)
-    else
-      @other_list= Restaurant.where.not(user_id: current_user.id).ransack(params[:other], search_key: :other)
-      @restaurants = @other_list.result(distinct: true)
-
-      @my_list = current_user.restaurants.ransack(params[:q])
-      @restaurants = @my_list.result(distinct: true)
-    end
+    @my_list = current_user.restaurants.includes(:user).ransack(params[:q])
+    @restaurants = @my_list.result(distinct: true)
     @random_select = @restaurants.shuffle.first
   end
 

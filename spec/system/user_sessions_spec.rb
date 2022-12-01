@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "UserSessions", type: :system do
-  let(user) { create(:user) }
+  let(:user) { create(:user) }
 
   describe 'ログインする' do
     context 'フォームの記入が正常' do
@@ -65,5 +65,4 @@ RSpec.describe "UserSessions", type: :system do
         # https://stackoverflow.com/questions/52257588/capybara-unable-to-find-font-awesome-icons
       end
     end
-  end
 end
