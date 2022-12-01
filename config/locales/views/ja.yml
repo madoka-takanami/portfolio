@@ -31,8 +31,8 @@ ja:
   restaurants:
     index:
       title: 'リスト一覧'
-      not_have_lists: '保存されているメモは0です'
       random_select: 'ランダムで決める'
+      not_have_lists: '保存されているメモは0です'
     new:
       rst_name: '店名'
       place: '場所'
@@ -55,3 +55,13 @@ ja:
       update: '更新'
     destroy:
       success: '削除しました'
+    random_select:
+      random: 'ランダム'
+  others_restaurants:
+    index:
+      title: 'リスト一覧'
+      random: 'ランダム'
+      random_select: 'ランダムで決める'
+      not_have_lists: '保存されているメモは0です'
+    random_select:
+      random: 'ランダム'

@@ -1,12 +1,10 @@
 <h1><%= t('.title') %></h1><br>
-  <%= render 'shared/search_form', q: @my_list, url: restaurants_path %>
+  <%= render 'shared/search_form', q: @other_list, url: others_restaurants_index_path %>
   <%= render 'random_select' %>
     <% if @restaurants.any? %>
-      <%= render 'small_new' %>
       <%= render @restaurants %>
     <% else %>
       <p><%= t('.not_have_lists') %></p>
-      <%= render 'small_new' %>
     <% end %>
 
   <%= render 'shared/footer' %>

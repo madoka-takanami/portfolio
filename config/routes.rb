@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'others_restaurants/index'
   root to: 'users#index'
 
   resources :users, only: %i[new create]
