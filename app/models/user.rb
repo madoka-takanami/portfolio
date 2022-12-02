@@ -18,9 +18,7 @@ class User < ApplicationRecord
   enum generation: { not_select: 0, twenties: 1, thirties: 2, forties: 3, fifties: 4, over_sixties: 5 }
 
   def follow(user_id)
-    unless self == user_id
-      self.active_relationship.build(followed_id: user_id)
-    end
+    active_relationship.build(followed_id: user_id)
   end
 
   def unfollow(user_id)
