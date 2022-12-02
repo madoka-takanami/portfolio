@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :restaurants, dependent: :destroy
   has_many :active_relationship, class_name: 'Relationship', foreign_key: 'following_id', dependent: :destroy
   has_many :following, through: :active_relationship, source: :followed
-  has_many :passive_relationships, class_name: 'Relationship', foreign_key: 'followed_id', dependent: :destroy
+  has_many :passive_relationship, class_name: 'Relationship', foreign_key: 'followed_id', dependent: :destroy
   has_many :followed, through: :passive_relationships, source: :following
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
@@ -27,6 +27,6 @@ class User < ApplicationRecord
   end
 
   def following?(user_id)
-    self.following.include?(user_id)
+    following.include?(user_id)
   end
 end
