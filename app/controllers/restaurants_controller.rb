@@ -25,7 +25,6 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @user = @restaurant.user
   end
 
   def edit; end

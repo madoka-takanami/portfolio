@@ -14,15 +14,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def index
-    @users = User.all.where.not(id: current_user.id)
-  end
-
-  def show
-    @user = User.find(params[:id])
-    @restaurants = @user.restaurants
-  end
-
   private
 
   def user_params

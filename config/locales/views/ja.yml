@@ -17,7 +17,6 @@ ja:
     create:
       success: '登録しました'
       fault: 'やり直してください'
-    index:
   user_session:
     new:
       login: 'ログイン'
