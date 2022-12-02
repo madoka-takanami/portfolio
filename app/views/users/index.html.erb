@@ -1,18 +1,33 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-<button class="bg-gray-200 hover:bg-gray-100 text-white rounded px-4 py-2">Gray 200</button>
-<button class="btn btn-primary">daisyUi button</button>
-<button class="bg-gray-200 hover:bg-gray-100 text-white rounded px-4 py-2">Gray 200</button>
-<button class="btn">Hello daisyUI</button>
-<button class="btn btn-active btn-secondary">Button</button>
+    <% if @users.any? %>
+      <% @users.each do |user| %>
+      <div class="overflow-x-auto w-full">
+        <table class="table w-full sample">
+          <tr>
+          <td>
+            <div class="avatar">
+              <div class="rounded-full w-12 ring">
+                <% if user.avator.present? %>
+                  <%= user.avator %>
+                <% else %>
+                  <%= image_tag "pose_pien_uruuru_woman", alt: "アイコン" %>
+                <% end %>
+              </div>
+            </div>
+            </td>
+            <td><div class="font-bold"><%= user.name %></div></td>
+            <td><div class="font-bold"><%= user.generation_i18n %></div></td>
+            <td><span class="font-bold"><%= user.introduction %></span></td>
+            <td><%= link_to '詳細', user_path(user.id) %></td>
+            <td><%= render 'follow_button', user: user %></td>
+          </tr>
+        </table>
+      </div>
+    <% end %>
+  <% else %>
+    <p>まだ登録されていません</p>
+  <% end %>
 
-<button class="btn">neutral</button>
-<button class="btn btn-bg-secondary">secondary</button>
-<button class="btn btn-accent">accent</button>
-<button class="btn btn-ghost">ghost</button>
-<button class="btn btn-link">link</button>
-<p class="text-blue-500 text-3xl font-bold underline">Hello world!</p>
-<div className='font-kosugimaru card md:w-96 w-60 bg-base-100 text-gray-900 shadow-xl'>
+
 <button class="btn btn-primary">PRIMARY</button>
 <button class="btn btn-secondary">SECONDARY</button>
 <button class="btn btn-accent">ACCENT</button>
