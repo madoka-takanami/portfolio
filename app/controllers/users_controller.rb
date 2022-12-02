@@ -15,7 +15,11 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all.where.not(id: current_user.id)
+    if params[:follow] == nil
+      @users = User.all.where.not(id: current_user.id)
+    elsif params[:follow] == "marked"
+      @users = current_user.following.all
+    end
   end
 
   def show
