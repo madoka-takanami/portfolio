@@ -18,6 +18,7 @@
     <% end %>
     <%= render 'shared/flash_message' %>
     <%= yield %>
+    <%= render 'shared/footer' if logged_in? %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
