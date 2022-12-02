@@ -1,0 +1,9 @@
+詳細
+
+<p><%= @user.name %></p>
+<%= render 'follow_button', user: @user %>
+<!-- 追加 -->
+<% @restaurants.each do |restaurant| %>
+  <hr>
+  <p><%=link_to restaurant.rst_name, restaurant_path(restaurant.id) %></p>
+<% end %>

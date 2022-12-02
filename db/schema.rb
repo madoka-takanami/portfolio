@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_23_082147) do
+ActiveRecord::Schema.define(version: 2022_12_01_104628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "relationships", force: :cascade do |t|
+    t.bigint "following_id"
+    t.bigint "followed_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["followed_id"], name: "index_relationships_on_followed_id"
+    t.index ["following_id"], name: "index_relationships_on_following_id"
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.integer "rst_type", default: 0, null: false
@@ -41,5 +50,7 @@ ActiveRecord::Schema.define(version: 2022_11_23_082147) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "relationships", "users", column: "followed_id"
+  add_foreign_key "relationships", "users", column: "following_id"
   add_foreign_key "restaurants", "users"
 end
