@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationship, source: :followed
   has_many :passive_relationship, class_name: 'Relationship', foreign_key: 'followed_id', dependent: :destroy
   has_many :followed, through: :passive_relationships, source: :following
+  has_many :visits, dependent: :destroy
+  has_many :visited_rst, through: :visits, source: :restaurant
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
@@ -20,13 +22,25 @@ class User < ApplicationRecord
   def follow(user_id)
     active_relationship.build(followed_id: user_id)
   end
-
+# この中からあることを探す↓
   def unfollow(user_id)
     follow = self.active_relationship.find_by(user_id)
     follow.destroy
   end
-
+# 直接値をとりに行く↓
   def following?(user_id)
     following.include?(user_id)
+  end
+
+  def visit(restaurant)
+    visited_rst << restaurant
+  end
+
+  def unvisited(restaurant)
+    visited_rst.delete(restaurant)
+  end
+
+  def visited?(restaurant)
+    visited_rst.include?(restaurant)
   end
 end

@@ -1,5 +1,5 @@
 <h1><%= t('.title') %></h1><br>
-  <%= render 'shared/search_form', q: @other_list, url: others_restaurants_index_path %>
+  <%= render 'shared/search_form', q: @other_list, url: others_restaurants_path %>
   <%= render 'random_select' %>
     <% if @restaurants.any? %>
       <%= render @restaurants %>

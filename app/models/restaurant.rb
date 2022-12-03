@@ -1,5 +1,6 @@
 class Restaurant < ApplicationRecord
   belongs_to :user
+  has_many :visits
 
   validates :rst_name, presence: true
   validates :memo, length: { maximum: 300 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_01_104628) do
+ActiveRecord::Schema.define(version: 2022_12_02_131917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(version: 2022_12_01_104628) do
     t.boolean "notion", default: true, null: false
     t.string "name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  create_table "visits", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "restaurant_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["restaurant_id"], name: "index_visits_on_restaurant_id"
+    t.index ["user_id"], name: "index_visits_on_user_id"
   end
 
   add_foreign_key "relationships", "users", column: "followed_id"
