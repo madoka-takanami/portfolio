@@ -1,0 +1,6 @@
+<%= button_to 'マーク済み', user_relationship_path(user.id, current_user.id),
+                          id: "js-follow-button-#{ user.id }",
+                          class: "btn btn-sm btn-secondary",
+                          method: :delete,
+                          data: {"turbolinks" => false},
+                          remote: true %>

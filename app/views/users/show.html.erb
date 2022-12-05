@@ -18,6 +18,7 @@
   <% if @restaurants.any? %>
     <% @restaurants.each do |restaurant| %>
       <%= render 'restaurants/restaurant', restaurant: restaurant %>
+      <%= render 'restaurants/visit_button', restaurant: restaurant %>
     <% end %>
   <% else %>
     <p>まだ登録されていません</p>
