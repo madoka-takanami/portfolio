@@ -1,0 +1,7 @@
+<% if current_user.following?(@user) %>
+  <% if current_user.visited?(restaurant) %>
+    <%= render 'visits/visit', { restaurant: restaurant } %>
+  <% else %>
+    <%= render 'visits/unvisited', { restaurant: restaurant } %>
+  <% end %>
+<% end %>
