@@ -1,7 +1,7 @@
 <% if current_user.following?(@user) %>
   <% if current_user.visited?(restaurant) %>
-    <%= button_to '行った', restaurant_visits_path(restaurant.id), method: :delete, class: "btn btn-sm btn-secondary" %>
+    <%= render 'visits/visit', { restaurant: restaurant } %>
   <% else %>
-    <%= button_to '行ってない', restaurant_visits_path(restaurant.id), method: :post, class: "btn btn-sm btn-accent" %>
+    <%= render 'visits/unvisited', { restaurant: restaurant } %>
   <% end %>
 <% end %>

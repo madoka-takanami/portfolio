@@ -1,4 +1,4 @@
-var btn = document.getElementById('btn');
+var btn = document.getElementById('js-btn');
 var modal = document.getElementById('modal');
 var closeBtn = document.getElementById('closeBtn');
 
