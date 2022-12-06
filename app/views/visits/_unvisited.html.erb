@@ -1,4 +1,4 @@
-<%= button_to '行ってない', restaurant_visits_path(restaurant.id),
+<%= button_to t('restaurants.index.unvisited'), restaurant_visits_path(restaurant.id),
                           id: "js-visits-button-#{ restaurant.id }",
                           class: "btn btn-sm btn-accent",
                           remote: true,

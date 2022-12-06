@@ -10,10 +10,10 @@
       </div>
         <div class="garagara-result fadeUp" >
           <% if @random_select %>
-            <%= "今回はこちらはいかがでしょう！" %><br>
+            <%= t('.how_is_this?') %><br>
             <%= "〜  #{ @random_select.rst_name }  〜" %>
           <% else %>
-            <%= "まだお店が登録されていません！" %>
+            <%= t('.restaurants_are_not_registed') %>
           <% end %>
         </div>
       <%= video_tag "/assets/videos/garagara.mp4", autoplay: true, muted: true %>

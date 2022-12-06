@@ -9,7 +9,7 @@
                 <% if user.avator.present? %>
                   <%= user.avator %>
                 <% else %>
-                  <%= image_tag "pose_pien_uruuru_woman", alt: "アイコン" %>
+                  <%= image_tag "pose_pien_uruuru_woman", alt: t('.icon') %>
                 <% end %>
               </div>
             </div>
@@ -24,7 +24,7 @@
       </div>
     <% end %>
   <% else %>
-    <p>まだ登録されていません</p>
+    <p><%= t('.not_registed') %></p>
   <% end %>
 
 
