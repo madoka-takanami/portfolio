@@ -1,4 +1,4 @@
-<%= button_to '行った', restaurant_visits_path(restaurant.id),
+<%= button_to t('restaurants.index.visited'), restaurant_visits_path(restaurant.id),
                           id: "js-visits-button-#{ restaurant.id }",
                           class: "btn btn-sm btn-secondary",
                           method: :delete,

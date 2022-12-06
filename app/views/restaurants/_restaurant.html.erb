@@ -37,7 +37,11 @@
           </div>
         </td>
         <td>
-          <%= link_to '詳細', restaurant_path(restaurant.id) %>
+          <% if logged_in? && current_user.own?(restaurant) %>
+            <%= link_to (t 'restaurants.index.show'), restaurant_path(restaurant.id) %>
+          <% else %>
+            <%= link_to (t 'restaurants.index.show'), others_restaurant_path(restaurant.id) %>
+          <% end %>
         </td>
       </tr>
   </table>

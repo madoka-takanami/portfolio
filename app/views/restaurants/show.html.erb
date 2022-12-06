@@ -26,5 +26,7 @@
     <%= @restaurant.memo %>
   </div>
 
-  <%= link_to (t '.edit'), edit_restaurant_path(@restaurant.id), class: "btn btn-primary" %>
-  <%= button_to (t '.delete'), restaurant_path(@restaurant.id), method: :delete, class: "btn btn-accent" %>
+  <% if logged_in? && current_user.own?(@restaurant) %>
+    <%= link_to (t '.edit'), edit_restaurant_path(@restaurant.id), class: "btn btn-primary" %>
+    <%= button_to (t '.delete'), restaurant_path(@restaurant.id), method: :delete, class: "btn btn-accent" %>
+  <% end %>
