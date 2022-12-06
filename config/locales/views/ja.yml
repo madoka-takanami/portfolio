@@ -17,7 +17,7 @@ ja:
       to_login_page: 'ログインはこちら'
     index:
       followed: 'マーク済み'
-      not_followed: 'マークする'
+      follow: 'マークする'
     show:
       icon: 'アイコン'
       not_registed: 'まだ登録されていません'
