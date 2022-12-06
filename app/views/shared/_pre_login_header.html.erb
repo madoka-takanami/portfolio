@@ -3,7 +3,7 @@
     <%= link_to 'がらぽんごはん', '#',  class: "btn btn-ghost normal-case text-xl" %>
   </div>
     <div class="navbar-end">
-      <%= link_to 'みんなのリスト', '#', class: "btn" %>
+      <%= link_to (t 'defaults.restaurants_list'), others_restaurants_path, class: "btn" %>
       <%= link_to 'マイリスト', '#', class: "btn btn-disabled" %>
     <button class="btn btn-ghost btn-circle">
       <%= link_to login_path do %>
