@@ -1,4 +1,4 @@
-<%= button_to 'マークする', user_relationships_path(user.id),
+<%= button_to t('users.index.followed'), user_relationships_path(user.id),
                           id: "js-follow-button-#{ user.id }",
                           class: "btn btn-sm btn-accent",
                           data: {"turbolinks" => false},

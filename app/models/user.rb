@@ -19,6 +19,10 @@ class User < ApplicationRecord
 
   enum generation: { not_select: 0, twenties: 1, thirties: 2, forties: 3, fifties: 4, over_sixties: 5 }
 
+  def own?(object)
+    id == object.user_id
+  end
+
   def follow(user_id)
     active_relationship.build(followed_id: user_id)
   end

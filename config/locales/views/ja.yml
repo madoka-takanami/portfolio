@@ -1,23 +1,26 @@
 ja:
   defaults:
     title: 'がらぽんごはん'
-    login: 'ログイン'
-    register: '登録'
-    logout: 'ログアウト'
     restaurants_list: 'みんなのリスト'
+    login: 'ログイン'
+    logout: 'ログアウト'
+    register: '登録'
     picture: '画像'
   message:
     success: '登録しました'
     updated: '更新しました'
     fault: 'やり直してください'
+    login_first: 'ログインしてください'
   users:
     new:
       signup: 'ユーザー登録'
       to_login_page: 'ログインはこちら'
-    create:
-      success: '登録しました'
-      fault: 'やり直してください'
     index:
+      followed: 'マーク済み'
+      not_followed: 'マークする'
+    show:
+      icon: 'アイコン'
+      not_registed: 'まだ登録されていません'
   user_session:
     new:
       login: 'ログイン'
@@ -34,15 +37,12 @@ ja:
       title: 'リスト一覧'
       random_select: 'ランダムで決める'
       not_have_lists: '保存されているメモは0です'
+      show: '詳細'
+      icon: 'アイコン'
+      visited: '行った'
+      unvisited: '行ってない'
+      not_registed: 'まだ登録されていません'
     new:
-      rst_name: '店名'
-      place: '場所'
-      feature: '特徴'
-      memo: 'メモ'
-    create:
-      success: '登録しました'
-      fault: 'やり直してください'
-    small_new:
       rst_name: '店名'
       place: '場所'
       feature: '特徴'
@@ -53,16 +53,13 @@ ja:
       delete: '削除'
     edit:
       title: 'お店編集'
-      update: '更新'
     destroy:
       success: '削除しました'
     random_select:
       random: 'ランダム'
+      how_is_this?: '今回はこちらはいかがでしょう！'
+      restaurants_are_not_registed: "まだお店が登録されていません！"
   others_restaurants:
     index:
       title: 'リスト一覧'
-      random: 'ランダム'
-      random_select: 'ランダムで決める'
       not_have_lists: '保存されているメモは0です'
-    random_select:
-      random: 'ランダム'
