@@ -1,3 +1,4 @@
+
 <h2>探す</h2>
 
 <input id="keyword" type="url">
@@ -12,5 +13,5 @@
     }
 </style>
 
-<%= javascript_pack_tag 'new.js' %>
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback&callback=initMap&libraries=places" async defer></script>
+<%= javascript_pack_tag 'show.js' %>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
