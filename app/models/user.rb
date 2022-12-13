@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :followed, through: :passive_relationships, source: :following
   has_many :visits, dependent: :destroy
   has_many :visited_rst, through: :visits, source: :restaurant
+  has_many :spots, dependent: :destroy
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }

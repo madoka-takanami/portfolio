@@ -37,13 +37,14 @@ ActiveRecord::Schema.define(version: 2022_12_07_132034) do
   end
 
   create_table "spots", force: :cascade do |t|
-    t.string "address"
+    t.string "address", null: false
     t.float "latitude"
     t.float "longitude"
-    t.bigint "restaurant_id"
+    t.string "rst_place"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["restaurant_id"], name: "index_spots_on_restaurant_id"
+    t.index ["user_id"], name: "index_spots_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -4,13 +4,17 @@ class SpotsController < ApplicationController
   end
 
   def create
-    restaurant = current_user.restaurants.find_by(restaurant_id: params[:id])
-    @spot = Spot.restaurant.create(params[:spot_params])
+    # restaurant = current_user.restaurants.find_by(restaurant_id: params[:id])
+    # @spot = Spot.restaurant.create(params[:spot_params])
+    @spot = current_user.spots.new(spot_params)
     if @spot.save
+      restaurant = current_user.restaurants.build(rst_name: @spot.address)
+      restaurant.save
+      flash[:success] = t('message.success')
       redirect_to restaurants_path
     else
       render :new
-      flash[:warning] = '地図が見つかりませんでした'
+      flash[:warning] = '見つかりませんでした'
     end
   end
 
@@ -27,6 +31,6 @@ class SpotsController < ApplicationController
   private
 
   def spot_params
-    params.require(:spot).permit(:address, :latitude, :longitude, :restaurant_id)
+    params.require(:spot).permit(:address, :latitude, :longitude, :rst_place, :user_id)
   end
 end
