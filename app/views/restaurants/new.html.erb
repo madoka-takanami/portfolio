@@ -1,4 +1,11 @@
 
+
+<div  class="btn btn-secondary " >
+  <%= link_to 'マップから探す', new_spot_path %>
+  <p>&emsp;</p>
+  <i class="fa-solid fa-map-location-dot"></i>
+</div>
+
 <%= form_with model: @restaurant, local: true do |f| %>
   <%= render 'shared/error_message', object: f.object %>
 
