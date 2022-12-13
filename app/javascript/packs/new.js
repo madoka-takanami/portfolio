@@ -28,6 +28,7 @@ function initMap() {
       lat: position.coords.latitude,
       lng: position.coords.longitude
     };
+
     //情報ウィンドウに現在位置を指定
     infowindow.setPosition(pos);
     //情報ウィンドウのコンテンツを設定
@@ -53,6 +54,7 @@ function initMap() {
         //results の数だけ for 文で繰り返し処理
         for (var i = 0; i < results.length; i++) {
           //createMarker() はマーカーを生成する関数（別途定義）
+
           createMarker(results[i]);
         }
       }
@@ -114,6 +116,10 @@ function initMap() {
     marker.addListener('click', function () {
       infowindow.setContent(place.name);  //results[i].name
       infowindow.open(map, this);
+
+      let address = document.getElementById('address')
+      let value = document.getElementById('address').textContent = place.name;
+      address.setAttribute('value', value);
     });
   }
 }

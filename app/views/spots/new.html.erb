@@ -13,3 +13,9 @@
 
 <%= javascript_pack_tag 'new.js' %>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback&callback=initMap&libraries=places" async defer></script>
+
+<%= form_with model: @spot, local: true do |f| %>
+  <%= render 'shared/error_message', object: f.object %>
+    <%= f.text_field :address, id: "address", value:"" %>
+  <%= f.submit (t 'defaults.register'), id: "submit", class: 'btn btn-primary' %>
+<% end %>
