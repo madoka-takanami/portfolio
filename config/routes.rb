@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
   resources :others_restaurants, only: %i[index show]
   resources :spots, only: %i[new index create destroy]
+  resource :profile, only: %i[show edit update]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'login', to: 'user_session#new'

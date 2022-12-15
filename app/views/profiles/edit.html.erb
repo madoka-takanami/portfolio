@@ -1,0 +1,48 @@
+<h1>プロフィール編集</h1>
+
+  <%= form_with model: @user, url: profile_path, local: true  do |f| %>
+    <%= render 'shared/error_message', object: f.object %>
+      <table class="table">
+      <tr>
+        <th>
+          <div class="avatar">
+            <div class="w-24 rounded-xl">
+              <%= image_tag @user.avatar.url, id: 'preview' %>
+            </div>
+          </div>
+        </th>
+        <td>
+          <%= f.file_field :avatar, onchange: 'previewImage(preview)',
+                                    accept: 'image/*',
+                                    class: "file-input file-input-bordered w-full max-w-xs" %>
+          <%= f.hidden_field :avatar_cache %>
+        </td>
+      </tr>
+        <tr>
+          <th><%= f.label :email %></th>
+          <td> <%= f.email_field :email, class: "input input-bordered w-full max-w-xs" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :name %></th>
+          <td><%= f.text_field :name, class: "input input-bordered w-full max-w-xs" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :generation %></th>
+          <td><%= f.select :generation, User.generations_i18n.invert, {}, class: "select select-bordered w-full max-w-xs" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :notion %></th>
+          <td><div>
+            <%= f.check_box :notion, class: "toggle", :as => :boolean%>
+          </td></div>
+        </tr>
+        <tr>
+          <th><%= f.label :introduction %></th>
+          <td><%= f.text_area :introduction, placeholder: "200文字まで",
+                                            class: "input input-bordered w-full max-w-xs"%>
+          </td>
+        </tr>
+      </table>
+      <%= f.submit (t 'defaults.update'), class: 'btn btn-primary' %>
+  <% end %>
+<%= javascript_pack_tag 'image.js' %>

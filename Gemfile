@@ -55,11 +55,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'carrierwave'
 gem 'dotenv-rails'
 gem 'enum_help'
 gem 'font-awesome-sass'
 gem 'geocoder'
 gem 'google_places'
+gem "mini_magick"
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
