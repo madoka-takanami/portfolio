@@ -6,6 +6,7 @@ ja:
     logout: 'ログアウト'
     register: '登録'
     picture: '画像'
+    update: '更新する'
   message:
     success: '登録しました'
     updated: '更新しました'

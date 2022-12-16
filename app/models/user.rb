@@ -15,8 +15,10 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true
-  validates :notion, presence: true
+  validates :notion, inclusion: {in: [true, false]}
   validates :introduction, length: { maximum: 250 }
+
+  mount_uploader :avatar, AvatarUploader
 
   enum generation: { not_select: 0, twenties: 1, thirties: 2, forties: 3, fifties: 4, over_sixties: 5 }
 
