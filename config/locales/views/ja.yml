@@ -12,6 +12,14 @@ ja:
     updated: '更新しました'
     fault: 'やり直してください'
     login_first: 'ログインしてください'
+  password_resets:
+    new:
+      reset_my_password: "パスワードをリセットする"
+    create:
+      sent_email: "パスワードをリセットするメールを送りました"
+    update:
+      password_changed: 'パスワードを変更しました'
+      not_cahnge_password: 'パスワードの変更に失敗しました'
   users:
     new:
       signup: 'ユーザー登録'
