@@ -1,0 +1,7 @@
+<%= form_with url: password_resets_path, local: true, method: :post do |form| %>
+  <div class="field">
+    <%= form.label :email %><br />
+    <%= form.text_field :email, class: "input input-bordered w-full max-w-xs" %>
+    <%= form.submit (t '.reset_my_password'), class: "btn btn-primary" %>
+  </div>
+<% end %>

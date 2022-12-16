@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :others_restaurants, only: %i[index show]
   resources :spots, only: %i[new index create destroy]
   resource :profile, only: %i[show edit update]
+  resources :password_resets, only: %i[create edit update new]
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'login', to: 'user_session#new'

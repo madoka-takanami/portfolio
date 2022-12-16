@@ -17,9 +17,9 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :notion, inclusion: {in: [true, false]}
   validates :introduction, length: { maximum: 250 }
+  validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
 
   mount_uploader :avatar, AvatarUploader
-
   enum generation: { not_select: 0, twenties: 1, thirties: 2, forties: 3, fifties: 4, over_sixties: 5 }
 
   def own?(object)
