@@ -1,0 +1,8 @@
+<p><%= @user.name %> 様</p>
+<p>今日はこのお店に行ってみるのはいかがですか？</p>
+<% if @restaurant != nil %>
+  <p>店名: <%= @restaurant.rst_name %></p>
+<% else %>
+  <p>他人の行きたい店に行ってみますか？</p>
+<% end %>
+<p><a href="<%= @url %>"><%= @url %></a></p>

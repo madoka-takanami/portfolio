@@ -34,6 +34,7 @@ group :development, :test do
   gem 'letter_opener_web'
   gem 'rspec-rails', '~> 6.0.0'
   gem 'factory_bot_rails'
+  gem 'whenever', require: false
 end
 
 group :test do
