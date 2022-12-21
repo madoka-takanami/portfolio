@@ -1,48 +1,39 @@
-<div class="overflow-x-auto w-full">
-  <table class="table w-full sample">
-    <!-- head -->
-    <!--
-    <thead>
-      <tr>
-        <th colspan="5">Restaurants</th>
-      </tr>
-    </thead>
-    <tbody>
-    -->
-      <!-- row 1 -->
+<table class="table table-fixed w-full">
+  <div class="flex justify-center border-dashed border border-primary-focus">
     <tr data-href="<%= restaurant_path(restaurant.id) %>">
-        <td>
-          <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="mask mask-squircle w-12 h-12">
-                <% if restaurant.rst_type %>
-                  <%= image_tag "#{restaurant.rst_type}.png", alt: t('default.picture') %>
-                <% else %>
-                  <%= image_tag "default.png", alt: t('default.picture') %>
-                <% end %>
-              </div>
+      <td>
+        <div class="flex items-center">
+          <div class="avatar">
+            <div class="w-12 rounded-xl">
+              <% if restaurant.rst_type %>
+                <%= image_tag "#{restaurant.rst_type}.png", alt: t('default.picture') %>
+              <% else %>
+                <%= image_tag "default.png", alt: t('default.picture') %>
+              <% end %>
             </div>
-          <div>
-        </td>
-        <td><div class="text-xs opacity-90"><%= restaurant.place %></div></td>
-        <td><div class="font-bold"><%= restaurant.rst_name %></div></td>
-        <td>
-          <span class="badge badge-ghost badge-sm">
-            <%= restaurant.feature %>
-          </span>
-        </td>
-        <td>
-          <div class="text-xs" >
-            <%= restaurant.memo %>
           </div>
-        </td>
-        <td>
+        </div>
+      </td>
+
+      <td>
+        <div class="text-sm opacity-90 mb-1.5 mr-0 max_11"><%= restaurant.place %></div>
+        <div class="font-bold text-lg max_11"><%= restaurant.rst_name %></div>
+        <span class="badge badge-ghost badge-sm mb-2 max_11">
+          <%= restaurant.feature %>
+        </span>
+          <p class="text-xs max_11">マイメモ: <%= restaurant.memo %></p>
+      </td>
+
+      <td></td>
+      <td>
+        <div class="btn btn-outline">
           <% if logged_in? && current_user.own?(restaurant) %>
             <%= link_to (t 'restaurants.index.show'), restaurant_path(restaurant.id) %>
           <% else %>
             <%= link_to (t 'restaurants.index.show'), others_restaurant_path(restaurant.id) %>
           <% end %>
-        </td>
-      </tr>
-  </table>
-</div>
+        </div>
+      </td>
+    </tr>
+  </div>
+</table>

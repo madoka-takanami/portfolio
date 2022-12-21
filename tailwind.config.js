@@ -8,6 +8,11 @@ module.exports = {
     'modal-bottom',
   ],
   theme: {
+    screens: {
+      'sm': { 'max': '420px' },
+      'md': { 'max': '900px' },
+      'lg': { 'max': '1200px' },
+    },
     extend: {},
   },
   daisyui: {

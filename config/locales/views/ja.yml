@@ -55,7 +55,7 @@ ja:
       rst_name: '店名'
       place: '場所'
       feature: '特徴'
-      memo: 'メモ'
+      memo: 'マイメモ'
     show:
       title: 'お店詳細'
       edit: '編集'
