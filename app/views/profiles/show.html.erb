@@ -1,7 +1,7 @@
-<div class="flex justify-center flex-wrap" >
-  <table class="table">
+<div class="flex justify-center">
+  <table class="table mt-5">
       <tr>
-        <th><%= t(User.human_attribute_name(:avator)) %></th>
+        <th class="text-sm m-1"><%= t(User.human_attribute_name(:avator)) %></th>
           <td>
             <div class="avatar">
               <div class="w-24 rounded-xl">
@@ -10,35 +10,40 @@
             </div>
           </td>
       </tr>
-        <tr>
-          <th><%= t(User.human_attribute_name(:email)) %></th>
-          <td><%= current_user.email %></td>
-        </tr>
-        <tr>
-          <th><%= t(User.human_attribute_name(:name)) %></th>
-          <td><%= current_user.name %></td>
-        </tr>
-        <tr>
-          <th><%= t(User.human_attribute_name(:generation)) %></th>
-          <td><%= current_user.generation_i18n %></td>
-        </tr>
-        <tr>
-          <th><%= t(User.human_attribute_name(:notion)) %></th>
-          <td>
-            <% if current_user.notion == true %>
-              <p>ON</p>
-            <% else %>
-              <p>OFF</p>
-            <% end %>
-          </td>
-        </tr>
-        <tr>
-          <th><%= t(User.human_attribute_name(:introduction)) %></th>
-          <td><p class="memo"><%= current_user.introduction %></p></td>
-        </tr>
+
+      <tr>
+        <th class="text-sm m-1"><%= t(User.human_attribute_name(:email)) %></th>
+        <td><%= current_user.email %></td>
+      </tr>
+
+      <tr>
+        <th class="text-sm m-1"><%= t(User.human_attribute_name(:name)) %></th>
+        <td><%= current_user.name %></td>
+      </tr>
+
+      <tr>
+        <th class="text-sm m-1"><%= t(User.human_attribute_name(:generation)) %></th>
+        <td><%= current_user.generation_i18n %></td>
+      </tr>
+
+      <tr>
+        <th class="text-sm m-1"><%= t(User.human_attribute_name(:notion)) %></th>
+        <td>
+          <% if current_user.notion == true %>
+            <p>ON</p>
+          <% else %>
+            <p>OFF</p>
+          <% end %>
+        </td>
+      </tr>
+
+      <tr>
+        <th class="text-sm m-1"><%= t(User.human_attribute_name(:introduction)) %></th>
+        <td><p class="coment"><%= current_user.introduction %></p></td>
+      </tr>
   </table>
 </div>
 
   <div class="flex justify-center mt-5" >
-    <%= link_to '編集', edit_profile_path, class: 'btn btn-success btn-wide' %>
+    <%= link_to (t 'defaults.edit'), edit_profile_path, class: 'btn btn-success btn-wide' %>
   </div>

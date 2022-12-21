@@ -1,10 +1,10 @@
-<footer class="fixed bottom-0 flex-auto">
+<footer>
   <% unless logged_in? %>
     <div class="btn-disabled">
   <% end %>
-      <div class="btm-nav btm-nav-lg">
+      <div class="btm-nav btm-nav-lg media">
         <%= link_to new_restaurant_path do %>
-          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-pen-to-square"></i>
         <% end %>
         <%= link_to users_path do %>
           <i class="fa-solid fa-children"></i>

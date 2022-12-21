@@ -5,6 +5,8 @@ ja:
     login: 'ログイン'
     logout: 'ログアウト'
     register: '登録'
+    show: '詳細'
+    edit: '編集'
     picture: '画像'
     update: '更新する'
   message:
@@ -45,8 +47,7 @@ ja:
     index:
       title: 'リスト一覧'
       random_select: 'ランダムで決める'
-      not_have_lists: '保存されているメモは0です'
-      show: '詳細'
+      not_have_lists: '保存されているメモは0個です'
       icon: 'アイコン'
       visited: '行った'
       unvisited: '行ってない'
@@ -58,7 +59,6 @@ ja:
       memo: 'マイメモ'
     show:
       title: 'お店詳細'
-      edit: '編集'
       delete: '削除'
     edit:
       title: 'お店編集'
