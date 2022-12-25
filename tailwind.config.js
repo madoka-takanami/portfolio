@@ -8,21 +8,26 @@ module.exports = {
     'modal-bottom',
   ],
   theme: {
+    screens: {
+      'sm': { 'max': '420px' },
+      'md': { 'max': '900px' },
+      'lg': { 'max': '1200px' },
+    },
     extend: {},
   },
   daisyui: {
     themes: [
       {
         mytheme: {
-          "primary": "#edb03a",
-          "secondary": "#68c5d6",
-          "accent": "#db484a",
-          "neutral": "#221924",
-          "base-100": "#FAF9FA",
-          "info": "#5FC5E7",
-          "success": "#0C6452",
-          "warning": "#C38513",
-          "error": "#E1362D",
+          "primary": "#a4632c",
+          "secondary": "#c6d557",
+          "accent": "#d47164",
+          "neutral": "#eba12d",
+          "base-100": "#f6cfb3",
+          "info": "#fbbd5f",
+          "success": "#98E4D2",
+          "warning": "#FFEE55",
+          "error": "#e9967a",
         },
       },
     ],

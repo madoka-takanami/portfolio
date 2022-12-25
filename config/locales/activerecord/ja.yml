@@ -10,8 +10,9 @@ ja:
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
         generation: '年代'
-        avator: 'アバター'
+        avator: 'アイコン'
         notion: 'メール通知'
+        introduction: 'ひとこと'
       restaurant:
         rst_type: '飲食店カテゴリ'
         rst_name: '店名'

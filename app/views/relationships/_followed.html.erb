@@ -1,6 +1,6 @@
 <%= button_to t('users.index.followed'), user_relationship_path(user.id, current_user.id),
                           id: "js-follow-button-#{ user.id }",
-                          class: "btn btn-sm btn-secondary",
+                          class: "btn btn-sm btn-accent btn-mid",
                           method: :delete,
                           data: {"turbolinks" => false},
                           remote: true %>

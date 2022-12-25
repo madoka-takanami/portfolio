@@ -5,8 +5,11 @@ ja:
     login: 'ログイン'
     logout: 'ログアウト'
     register: '登録'
+    show: '詳細'
+    edit: '編集'
     picture: '画像'
     update: '更新する'
+    search: "検索"
   message:
     success: '登録しました'
     updated: '更新しました'
@@ -45,8 +48,7 @@ ja:
     index:
       title: 'リスト一覧'
       random_select: 'ランダムで決める'
-      not_have_lists: '保存されているメモは0です'
-      show: '詳細'
+      not_have_lists: '保存されているメモは0個です'
       icon: 'アイコン'
       visited: '行った'
       unvisited: '行ってない'
@@ -55,19 +57,19 @@ ja:
       rst_name: '店名'
       place: '場所'
       feature: '特徴'
-      memo: 'メモ'
+      memo: 'マイメモ'
     show:
       title: 'お店詳細'
-      edit: '編集'
       delete: '削除'
     edit:
       title: 'お店編集'
     destroy:
       success: '削除しました'
     random_select:
-      random: 'ランダム'
+      random: 'ランダムで選んでみる'
       how_is_this?: '今回はこちらはいかがでしょう！'
       restaurants_are_not_registed: "まだお店が登録されていません！"
+      close: '閉じる'
   others_restaurants:
     index:
       title: 'リスト一覧'

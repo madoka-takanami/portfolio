@@ -1,49 +1,28 @@
-<div class="overflow-x-auto w-full">
-  <table class="table w-full">
-    <!-- head -->
-    <!--
-    <thead>
-      <tr>
-        <th colspan="5">Restaurants</th>
-      </tr>
-    </thead>
-    <tbody>
-    -->
-      <!-- row 1 -->
-  <%= form_with model: @restaurant, url: { controller: 'restaurants', action: 'create'} do |f| %>
-    <%= render 'shared/error_message', object: f.object %>
-      <tr>
-        <td>
-          <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="mask mask-squircle w-12 h-12">
+<div class="flex justify-center">
+  <table class="table table-fixed border-dashed border-b border-primary-focus">
+    <%= form_with model: @restaurant, url: { controller: 'restaurants', action: 'create'} do |f| %>
+      <%= render 'shared/error_message', object: f.object %>
+        <tr>
+          <td>
+            <div class="flex items-center">
+              <div class="avatar">
+                <div class="w-12 rounded-xl">
                   <%= image_tag "default.png", alt: t('default.picture') %>
+                </div>
               </div>
             </div>
-          <div>
-        </td>
-        <td>
-          <div class="text-xs opacity-90">
-            <%= f.text_field :place, placeholder: t('restaurants.new.place')%>
-          </div>
-        </td>
-        <td>
-          <div class="font-bold">
-            <%= f.text_field :rst_name, value: t('restaurants.new.rst_name') %>
-          </div>
-        </td>
-        <td>
-          <span class="badge badge-ghost badge-sm">
-            <%= f.text_field :feature, placeholder: t('restaurants.new.feature') %>
-          </span>
-        </td>
-        <td>
-          <div class="text-xs" >
-            <%= f.text_field :memo, placeholder: t('restaurants.new.memo') %>
-          </div>
-        </td>
-        <td><%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %></td>
-      </tr>
+          </td>
+
+          <td>
+            <%= f.text_field :place, placeholder: t('restaurants.new.place'), class: "input input-bordered input-xs max-w-xs opacity-90 md-5"%>
+            <div class="">
+              <%= f.text_field :rst_name, placeholder: t('restaurants.new.rst_name'), class: "input input-bordered input-sm max-w-xs"%>
+            </div>
+            <%= f.text_field :memo, placeholder: t('restaurants.new.memo'), class: "input input-bordered input-sm max-w-xs"%>
+          </td>
+          <td><%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %></td>
+        </tr>
+      </div>
+    <% end %>
   </table>
 </div>
-<% end %>

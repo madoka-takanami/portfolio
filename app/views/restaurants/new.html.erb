@@ -1,36 +1,50 @@
-
-
-<div  class="btn btn-secondary " >
-  <%= link_to 'マップから探す', new_spot_path %>
-  <p>&emsp;</p>
-  <i class="fa-solid fa-map-location-dot"></i>
+<div class="flex justify-center my-10" >
+  <div  class="btn btn-wide btn-secondary" >
+    <%= link_to 'マップから探す', new_spot_path %>
+    &emsp;
+    <i class="fa-solid fa-map-location-dot"></i>
+  </div>
 </div>
 
-<%= form_with model: @restaurant, local: true do |f| %>
-  <%= render 'shared/error_message', object: f.object %>
+<div class="border-dashed border-b-2 border-base-400"></div>
 
-    <div class="icon_check">
-      <% Restaurant.rst_types.each do |key, value| %>
-        <div class="avatar btn btn-circle btn-ghost">
-          <div class="w-24 rounded-full ring">
-            <%= f.radio_button :rst_type, key %>
+<div class="flex justify-center" >
+  <%= form_with model: @restaurant, local: true do |f| %>
+    <%= render 'shared/error_message', object: f.object %>
+
+      <div class="icon_check mt-10 mb-5">
+        <% Restaurant.rst_types.each do |key, value| %>
+          <div class="avatar btn btn-circle btn-ghost mx-1">
+            <div class="w-24 rounded-xl ring-1 hover:ring-4 ring-yellow-500">
+              <%= f.radio_button :rst_type, key %>
               <%= image_tag "#{key}.png", alt: t('default.picture') %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
+</div>
+
+    <div class="flex w-full mb-1.5 justify-center">
+      <%= f.label :rst_name, class: "m-2" %>
+      <%= f.text_field :rst_name, placeholder: t('.rst_name'), class: "input input-bordered max-w-xs w-full" %><br>
     </div>
-  <br>
-    <%= f.label :rst_name %>
-    <%= f.text_field :rst_name, placeholder: t('.rst_name'),  class: "input input-bordered w-full max-w-xs" %><br>
 
-    <%= f.label :place %>
-    <%= f.text_field :place, placeholder: t('.place'),  class: "input input-bordered w-full max-w-xs" %><br>
+    <div class="flex w-full mb-1.5 justify-center">
+      <%= f.label :place, class: "m-2" %>
+      <%= f.text_field :place, placeholder: t('.place'), class: "input input-bordered max-w-xs w-full" %><br>
+    </div>
 
-    <%= f.label :feature %>
-    <%= f.text_field :feature, placeholder: t('.feature'),  class: "input input-bordered w-full max-w-xs" %><br>
+    <div class="flex w-full mb-1.5 justify-center">
+      <%= f.label :feature, class: "m-2" %>
+      <%= f.text_field :feature, placeholder: t('.feature'),  class: "input input-bordered max-w-xs w-full" %><br>
+    </div>
 
-    <%= f.label :memo %>
-    <%= f.text_area :memo, placeholder: t('.memo'),  class: "textarea textarea-bordered input-sm w-full max-w-xs" %><br>
+    <div class="flex w-full mb-1.5 justify-center">
+      <%= f.label :memo, class: "m-2 text-sm memo" %>
+      <%= f.text_area :memo, placeholder: t('.memo'),  class: "textarea textarea-bordered input-sm w-full max-w-xs" %><br>
+    </div>
 
-    <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
-<% end %>
+    <div class="flex justify-center mt-5" >
+      <%= f.submit (t 'defaults.register'), class: 'btn btn-wide btn-primary' %>
+    </div>
+  <% end %>

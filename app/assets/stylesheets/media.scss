@@ -1,0 +1,24 @@
+.max_25 {
+  width: 25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.max_11 {
+  width: 11rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box {
+  width: 80%;
+}
+
+.media {
+  width: 100%;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
