@@ -20,7 +20,7 @@
 
   <div class="flex justify-center flex-wrap" >
     <% if logged_in? && current_user.own?(@restaurant) %>
-      <%= link_to (t 'defaults.edit'), edit_restaurant_path(@restaurant.id), class: "btn btn-outline btn-secondary m-2" %>
-      <%= button_to (t '.delete'), restaurant_path(@restaurant.id), method: :delete, class: "btn btn-outline btn-warning m-2" %>
+      <%= link_to (t 'defaults.edit'), edit_restaurant_path(@restaurant.id), class: "btn btn-primary m-2" %>
+      <%= button_to (t '.delete'), restaurant_path(@restaurant.id), method: :delete, class: "btn btn-accent m-2" %>
     <% end %>
   </div>

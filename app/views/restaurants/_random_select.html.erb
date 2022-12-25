@@ -8,12 +8,16 @@
   <div class="modal-content">
     <div class="modal-body">
       <div class="modal-close-btn">
-        <input type="button" id="closeBtn" class="btn btn-outline btn-secondary" value="close">
+        <button id="closeBtn" class="btn btn-outline btn-secondary">
+          <%= t('.close') %>
+        </button>
       </div>
         <div class="garagara-result fadeUp" >
           <% if @random_select %>
-            <%= t('.how_is_this?') %><br>
-            <%= "〜  #{ @random_select.rst_name }  〜" %>
+            <%= t('.how_is_this?') %>
+            <div class="text-lg nt-5">
+              <%= "〜  #{ @random_select.rst_name }  〜" %>
+            </div>
           <% else %>
             <%= t('.restaurants_are_not_registed') %>
           <% end %>

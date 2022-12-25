@@ -14,11 +14,11 @@
             <td>
               <div class="flex flex-row place-content-between">
                 <div class="font-bold text-lg"><%= user.name %></div>
-                <div class="cell"><%= user.generation_i18n %></div>
+                <div class="cell text-xs"><%= user.generation_i18n %></div>
               </div>
             <p class="coment"><%= user.introduction %></p>
                 <div class="flex flex-row mt-2">
-                  <%= link_to (t 'defaults.show'), user_path(user.id), class: "btn btn-outline btn-secondary btn-sm btn-mid mr-1" %>
+                  <%= link_to (t 'defaults.show'), user_path(user.id), class: "btn btn-secondary btn-sm btn-mid mr-1" %>
                   <%= render 'follow_button', user: user %>
                 </div>
             </td>

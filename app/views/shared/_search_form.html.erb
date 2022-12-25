@@ -1,6 +1,6 @@
 <div class="sm:flex justify-center mt-2 ml-5 media">
   <%= search_form_for q, url: url do |f| %>
-    <%= f.search_field :rst_name_cont, class: "input input-bordered input-xs max-w-xs" %>
+    <%= f.search_field :rst_name_cont, placeholder: (t 'defaults.search'), class: "input input-bordered input-xs max-w-xs" %>
     <button class="btn btn-square btn-xs btn-outline">
       <% f.submit %>
       <i class="fa-solid fa-magnifying-glass"></i>

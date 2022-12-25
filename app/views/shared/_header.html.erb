@@ -1,12 +1,12 @@
 <div class="justify-evenly media">
 <div class="navbar bg-base-100 sticky top-0">
   <div class="flex-1">
-    <%= link_to  (t 'defaults.title'),'#',  class: "btn btn-ghost normal-case" %>
+    <%= link_to  (t 'defaults.title'),'#',  class: "btn btn-ghost normal-case text-lg" %>
   </div>
 
   <div class="navbar-end">
-    <%= link_to (t 'defaults.restaurants_list'), others_restaurants_path, class: "btn btn-sm btn-primary mr-0.5" %>
-    <%= link_to 'マイリスト', restaurants_path, class: "btn btn-sm btn-primary mr-0.5" %>
+    <%= link_to (t 'defaults.restaurants_list'), others_restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
+    <%= link_to 'マイリスト', restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
       <%= link_to login_path, method: :delete do %>
         <i class="fa-solid fa-right-from-bracket"></i>
       <% end %>

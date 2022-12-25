@@ -9,6 +9,7 @@ ja:
     edit: '編集'
     picture: '画像'
     update: '更新する'
+    search: "検索"
   message:
     success: '登録しました'
     updated: '更新しました'
@@ -65,9 +66,10 @@ ja:
     destroy:
       success: '削除しました'
     random_select:
-      random: 'ランダム'
+      random: 'ランダムで選んでみる'
       how_is_this?: '今回はこちらはいかがでしょう！'
       restaurants_are_not_registed: "まだお店が登録されていません！"
+      close: '閉じる'
   others_restaurants:
     index:
       title: 'リスト一覧'
