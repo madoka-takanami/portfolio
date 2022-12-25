@@ -1,3 +1,4 @@
+<% content_for(:title, (t '.title')) %>
 <div class="flex justify-center my-10" >
   <div  class="btn btn-wide btn-secondary" >
     <%= link_to 'マップから探す', new_spot_path %>
@@ -15,7 +16,7 @@
       <div class="icon_check mt-10 mb-5">
         <% Restaurant.rst_types.each do |key, value| %>
           <div class="avatar btn btn-circle btn-ghost mx-1">
-            <div class="w-24 rounded-xl ring-1 hover:ring-4 ring-yellow-500">
+            <div class="w-24 rounded-xl ring-2 hover:ring-4 ring-neutral">
               <%= f.radio_button :rst_type, key %>
               <%= image_tag "#{key}.png", alt: t('default.picture') %>
             </div>

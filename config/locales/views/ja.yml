@@ -15,24 +15,34 @@ ja:
     updated: '更新しました'
     fault: 'やり直してください'
     login_first: 'ログインしてください'
+    not_registed: '%{item}はまだ登録されていません'
+  footer:
+    memo: '新規登録'
+    user: 'ユーザー'
+    follow: '追っかける'
+    profile: 'プロフィール'
   password_resets:
     new:
+      title: 'パスワードリセット'
       reset_my_password: "パスワードをリセットする"
     create:
       sent_email: "パスワードをリセットするメールを送りました"
     update:
       password_changed: 'パスワードを変更しました'
       not_cahnge_password: 'パスワードの変更に失敗しました'
+    edit:
+      title: 'パスワードの再設定'
   users:
     new:
+      title: 'ユーザー新規登録'
       signup: 'ユーザー登録'
       to_login_page: 'ログインはこちら'
     index:
+      title: 'ユーザー一覧'
       followed: 'マーク済み'
       follow: 'マークする'
     show:
       icon: 'アイコン'
-      not_registed: 'まだ登録されていません'
   user_session:
     new:
       login: 'ログイン'
@@ -44,33 +54,42 @@ ja:
       fault: 'ログインに失敗しました'
     destroy:
       logout_success: 'ログアウトしました'
+  profiles:
+    show:
+      title: 'プロフィール'
+    edit:
+      title: 'プロフィール編集'
   restaurants:
     index:
-      title: 'リスト一覧'
+      title: 'マイリスト一覧'
       random_select: 'ランダムで決める'
       not_have_lists: '保存されているメモは0個です'
       icon: 'アイコン'
       visited: '行った'
       unvisited: '行ってない'
-      not_registed: 'まだ登録されていません'
     new:
+      title: '飲食店新規登録'
       rst_name: '店名'
       place: '場所'
       feature: '特徴'
       memo: 'マイメモ'
     show:
-      title: 'お店詳細'
       delete: '削除'
     edit:
-      title: 'お店編集'
+      title: '%{item}編集'
     destroy:
       success: '削除しました'
     random_select:
+      title: 'ランダムで選ぶ'
       random: 'ランダムで選んでみる'
       how_is_this?: '今回はこちらはいかがでしょう！'
-      restaurants_are_not_registed: "まだお店が登録されていません！"
       close: '閉じる'
   others_restaurants:
     index:
-      title: 'リスト一覧'
+      title: 'みんなのリスト一覧'
       not_have_lists: '保存されているメモは0です'
+  spots:
+    new:
+      title: 'マップから登録する'
+      place_name: '地名'
+      tap_the_map: 'ピンをクリックして選択'

@@ -1,9 +1,10 @@
+<% content_for(:title, @user.name) %>
 <div class="flex justify-center">
   <table class="table">
     <tr>
       <td>
         <div class="avatar">
-          <div class="w-24 rounded-xl ring">
+          <div class="w-24 rounded-xl ring ring-neutral">
               <%= image_tag @user.avatar.url, alt: t('.icon') %>
           </div>
         </div>
@@ -34,5 +35,5 @@
     <% end %>
     </div>
   <% else %>
-    <p class="text-center"><%= t('.not_registed') %></p>
+    <p class="text-center"><%= t('message.not_registed', item: 'message.not_registed', item: User.model_name.human) %></p>
   <% end %>
