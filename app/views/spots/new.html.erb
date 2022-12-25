@@ -1,8 +1,13 @@
-<h2>探す</h2>
+<%= content_for(:title, (t '.title')) %>
 
-<input id="keyword" type="url">
-<button  id="search", class="btn" >検索ボタン</button>
-<div id='map'></div>
+  <div class="media flex justify-center mb-2 mt-5">
+    <input id="keyword" placeholder="<%= (t '.place_name') %>" type="url" class="input input-bordered input-primary max-w-xs">
+    <button id="search" class="btn"><%= (t 'defaults.search') %></button>
+  </div>
+
+  <div class="flex justify-center">
+    <div id='map'></div>
+  </div>
 
 <style>
     #map {
@@ -14,8 +19,10 @@
 <%= javascript_pack_tag 'new.js' %>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback&callback=initMap&libraries=places" async defer></script>
 
-<%= form_with model: @spot, local: true do |f| %>
-  <%= render 'shared/error_message', object: f.object %>
-    <%= f.text_field :address, id: "address", value:"" %>
-  <%= f.submit (t 'defaults.register'), id: "submit", class: 'btn btn-primary' %>
-<% end %>
+  <div class="flex justify-center mt-2">
+    <%= form_with model: @spot, local: true do |f| %>
+      <%= render 'shared/error_message', object: f.object %>
+        <%= f.text_field :address, id: "address", value:"", placeholder: t('.tap_the_map'), class: "input input-bordered input-primary max-w-xs" %>
+      <%= f.submit (t 'defaults.register'), id: "submit", class: 'btn btn-accent' %>
+    <% end %>
+  </div>

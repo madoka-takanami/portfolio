@@ -1,20 +1,23 @@
-<h1>パスワードの再設定</h1><br>
+<% content_for(:title,(t '.title')) %>
+<div class="media ml-3">
+  <h1><%= (t '.title') %></h1>
 
-<%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
-  <%= render 'shared/error_message', object: f.object %>
+  <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
+    <%= render 'shared/error_message', object: f.object %>
 
-  <div class="field">
-    <%= f.label :password %><br/>
-    <%= f.password_field :password, class: "input input-bordered w-full max-w-xs" %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br/>
-    <%= f.password_field :password_confirmation, class: "input input-bordered w-full max-w-xs" %>
-  </div>
-    <div class="field">
-    <p>[ <%= f.label :email %> : <%= @user.email %> ]</p>
-  </div>
-  <div class="actions">
-      <%= f.submit (t 'defaults.update'), class: 'btn btn-primary' %>
-  </div>
-<% end %>
+    <div class="field mt-5 ml-3">
+      <%= f.label :password %><br/>
+      <%= f.password_field :password, class: "input input-bordered w-full max-w-xs" %>
+    </div>
+    <div class="field ml-3">
+      <%= f.label :password_confirmation %><br/>
+      <%= f.password_field :password_confirmation, class: "input input-bordered w-full max-w-xs" %>
+    </div>
+      <div class="field ml-3">
+      <p>[ <%= f.label :email %> : <%= @user.email %> ]</p>
+    </div>
+    <div class="actions mt-5 ml-3">
+        <%= f.submit (t 'defaults.update'), class: 'btn btn-primary ml-3' %>
+    </div>
+  <% end %>
+</div>

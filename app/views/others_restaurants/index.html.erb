@@ -1,3 +1,4 @@
+<% content_for(:title, (t '.title')) %>
   <%= render 'shared/search_form', q: @other_list, url: others_restaurants_path %>
   <%= render 'random_select' %>
     <% if @restaurants.any? %>

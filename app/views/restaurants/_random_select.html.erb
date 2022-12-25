@@ -19,7 +19,7 @@
               <%= "〜  #{ @random_select.rst_name }  〜" %>
             </div>
           <% else %>
-            <%= t('.restaurants_are_not_registed') %>
+            <%= t('message.not_registed', item: Restaurant.model_name.human) %>
           <% end %>
         </div>
       <%= video_tag "/assets/videos/garagara.mp4", autoplay: true, muted: true %>

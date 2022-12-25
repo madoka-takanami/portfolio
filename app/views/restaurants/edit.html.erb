@@ -1,4 +1,4 @@
-
+<% content_for(:title, (t '.title', item: @restaurant.rst_name)) %>
 <div class="flex justify-center">
   <%= form_with model: @restaurant, local: true do |f| %>
     <%= render 'shared/error_message', object: f.object %>

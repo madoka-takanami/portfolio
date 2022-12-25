@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
   def index
     @restaurant = Restaurant.new
     @my_list = current_user.restaurants.includes(:user).ransack(params[:q])
-    @restaurants = @my_list.result(distinct: true)
+    @restaurants = @my_list.result(distinct: true).order(created_at: "DESC")
     @random_select = @restaurants.shuffle.first
   end
 
