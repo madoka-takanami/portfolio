@@ -15,10 +15,10 @@
 
       <div class="icon_check mt-10 mb-5">
         <% Restaurant.rst_types.each do |key, value| %>
-          <div class="avatar btn btn-circle btn-ghost mx-1">
+          <div class="btn btn-circle btn-ghost mx-1 mb-3">
             <div class="w-24 rounded-xl ring-2 hover:ring-4 ring-neutral">
               <%= f.radio_button :rst_type, key %>
-              <%= image_tag "#{key}.png", alt: t('default.picture') %>
+              <%= image_tag "#{key}.png",:size =>'50x50', alt: t('default.picture') %>
             </div>
           </div>
         <% end %>
