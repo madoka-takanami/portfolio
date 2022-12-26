@@ -13,7 +13,7 @@
   <%= form_with model: @restaurant, local: true do |f| %>
     <%= render 'shared/error_message', object: f.object %>
 
-      <div class="icon_check mt-10 mb-5">
+      <div class="icon_check my-10">
         <% Restaurant.rst_types.each do |key, value| %>
           <div class="btn btn-circle btn-ghost mx-1 mb-3">
             <div class="w-24 rounded ring-2 hover:ring-4 ring-neutral">

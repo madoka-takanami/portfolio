@@ -39,7 +39,7 @@ ja:
       to_login_page: 'ログインはこちら'
     index:
       title: 'ユーザー一覧'
-      followed: 'マーク済み'
+      followed: 'マークをやめる'
       follow: 'マークする'
     show:
       icon: 'アイコン'
