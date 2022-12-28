@@ -11,7 +11,7 @@
       </td>
 
       <td>
-        <%= render 'follow_button', user: @user %>
+        <div id="js-follow-button-<%= @user.id %>"><%= render 'follow_button', user: @user %></div>
         <div class="font-bold text-lg"><%= @user.name %></div>
         <div class="text-xs"><%= @user.generation_i18n %></div>
         <div class="coment text-xs"><%= @user.introduction %></div>

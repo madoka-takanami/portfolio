@@ -20,7 +20,7 @@
             <p class="coment"><%= user.introduction %></p>
                 <div class="flex flex-row mt-2">
                   <%= link_to (t 'defaults.show'), user_path(user.id), class: "btn btn-secondary btn-sm btn-mid mr-1" %>
-                  <%= render 'follow_button', user: user %>
+                  <div id="js-follow-button-<%= user.id %>"><%= render 'follow_button', user: user %></div>
                 </div>
             </td>
         </tr>

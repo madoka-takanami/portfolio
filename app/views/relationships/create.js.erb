@@ -1,1 +1,1 @@
-$("#js-follow-button-<%= @user.id %>").replaceWith("<%= j(render 'followed', user: @user)%>");
+$("#js-follow-button-<%= @user.id %>").html("<%= j(render partial: 'relationships/followed', locals: { user: @user })%>");
