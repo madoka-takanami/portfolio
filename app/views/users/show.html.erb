@@ -30,7 +30,7 @@
 
     <% @restaurants.each do |restaurant| %>
     <div class="mt-3">
-      <div class="btn-place"><%= render 'restaurants/visit_button', restaurant: restaurant %></div>
+      <div class="btn-place" id="js-visits-button-<%= restaurant.id %>"><%= render 'restaurants/visit_button', restaurant: restaurant %></div>
       <div><%= render 'restaurants/restaurant', restaurant: restaurant %></div>
     <% end %>
     </div>
