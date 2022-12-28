@@ -1,1 +1,2 @@
-$('#js-visits-button-<%= @restaurants.id %>').replaceWith("<%= j(render 'unvisited', restaurant: @restaurants)%>");
+$('#js-visits-button-<%= @restaurant.id %>').html("<%= j(render partial: 'visits/unvisited', locals: {restaurant: @restaurant}
+)%>");

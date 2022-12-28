@@ -1,5 +1,4 @@
 <%= button_to t('users.index.follow'), user_relationships_path(user.id),
-                          id: "js-follow-button-#{ user.id }",
                           class: "btn btn-sm btn-neutral btn-mid",
-                          data: {"turbolinks" => false},
+                          method: :post,
                           remote: true %>

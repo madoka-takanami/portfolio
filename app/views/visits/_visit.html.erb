@@ -1,6 +1,4 @@
 <%= button_to t('restaurants.index.visited'), restaurant_visits_path(restaurant.id),
-                          id: "js-visits-button-#{ restaurant.id }",
-                          class: "btn btn-sm btn-secondary",
+                          class: "btn btn-sm btn-secondary btn-mid",
                           method: :delete,
-                          remote: true,
-                          data: { "turbolinks" => false}  %>
+                          remote: true %>

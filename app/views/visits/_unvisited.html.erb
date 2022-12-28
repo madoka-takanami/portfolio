@@ -1,5 +1,4 @@
 <%= button_to t('restaurants.index.unvisited'), restaurant_visits_path(restaurant.id),
-                          id: "js-visits-button-#{ restaurant.id }",
-                          class: "btn btn-sm btn-accent",
-                          remote: true,
-                          data: {"turbolinks" => false} %>
+                          class: "btn btn-sm btn-accent btn-mid",
+                          method: :post,
+                          remote: true %>
