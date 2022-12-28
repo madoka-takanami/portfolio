@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'top', to: 'top#index'
   get 'login', to: 'user_session#new'
   post 'login', to: 'user_session#create'
   delete 'login', to: 'user_session#destroy'

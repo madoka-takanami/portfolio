@@ -18,9 +18,39 @@
 
 .media {
   width: 100%;
-  max-width: 550px;
+  max-width: 420px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 900px) {
+  .col-right {
+    width: 14rem;
+    white-space: pre-wrap;
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-image: url(back.png);
+    background-size: contain;
+  }
+}
+
+@media (min-width: 900px) {
+  .col-left {
+    width: 14rem;
+    white-space: pre-wrap;
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-image: url(back.png);
+    background-size: contain;
+  }
 }

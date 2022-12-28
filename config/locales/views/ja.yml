@@ -39,7 +39,7 @@ ja:
       to_login_page: 'ログインはこちら'
     index:
       title: 'ユーザー一覧'
-      followed: 'マーク済み'
+      followed: 'マークをやめる'
       follow: 'マークする'
     show:
       icon: 'アイコン'
@@ -93,3 +93,6 @@ ja:
       title: 'マップから登録する'
       place_name: '地名'
       tap_the_map: 'ピンをクリックして選択'
+  top:
+    index:
+      start_login: '登録してはじめる'

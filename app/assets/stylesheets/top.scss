@@ -1,0 +1,69 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.circle-1 {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  background-color: #c6d557;
+  margin-left: 5rem;
+  box-shadow: 2px 2px 1px 3px #fffacd;
+}
+
+.circle-2 {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #d47164;
+  margin-left: 14rem;
+  margin-top: 5rem;
+  box-shadow: 3px 0px 1px 3px #fffacd;
+}
+
+.circle-3 {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  background-color: #a4632c;
+  margin-left: 7rem;
+  margin-top: 9rem;
+  box-shadow: -2px -3px 1px 3px #fffacd;
+}
+
+.circle-1 span {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  text-align: center;
+}
+
+.circle-2 span {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  text-align: center;
+}
+
+.circle-3 span {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  text-align: center;
+  display: flex;
+}
+
+.text-box {
+  width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.image_b {
+  display: block;
+  margin-top: 16rem;
+  margin-left: 9rem;
+}

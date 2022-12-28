@@ -38,14 +38,14 @@
   padding: 20px;
   width: 100%;
   border-radius: 20px;
-  box-shadow: 10px 10px 5px #bb8b2e, -10px -10px 5px #ffd546;
+  box-shadow: 10px 10px 5px #f4ad20, -10px -10px 5px #f4ad20;
 }
 
 .fadeUp {
   animation-name: fadeUpAnime;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  background-color: #edb03a;
+  background-color: #562400;
   color: white;
   animation-delay: 3s;
 }
@@ -60,19 +60,13 @@
   }
 }
 
-//.modal-close-btn {
-//  position: absolute;
-//  top: 0px;
-//  right: 0px;
-//}
-
-.content {
-  width: 220px;
-  white-space: pre-wrap;
-  text-align: center;
-}
-
 .memo {
   inline-size: 30px;
   word-wrap: break-word;
+}
+
+.rst-memo {
+  width: 220px;
+  white-space: pre-wrap;
+  text-align: center;
 }

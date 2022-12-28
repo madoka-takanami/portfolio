@@ -8,16 +8,17 @@
   <div class="modal-content">
     <div class="modal-body">
       <div class="modal-close-btn">
-        <button id="closeBtn" class="btn btn-outline btn-secondary">
+        <button id="closeBtn" class="btn btn-outline btn-secondary float">
           <%= t('.close') %>
+        </button>
+        <button id="closeBtn" class="btn btn-outline btn-secondary">
+          <%= link_to (t 'defaults.show'), restaurant_path(@random_select.id) %>
         </button>
       </div>
         <div class="garagara-result fadeUp" >
           <% if @random_select %>
-            <%= t('.how_is_this?') %>
-            <div class="text-lg nt-5">
-              <%= "〜  #{ @random_select.rst_name }  〜" %>
-            </div>
+              <p class="font-sm"><%= t('.how_is_this?') %></p>
+              <p class="font-sm"><%= "〜  #{ @random_select.rst_name }  〜" %></p>
           <% else %>
             <%= t('message.not_registed', item: Restaurant.model_name.human) %>
           <% end %>
