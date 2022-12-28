@@ -8,8 +8,11 @@
   <div class="modal-content">
     <div class="modal-body">
       <div class="modal-close-btn">
-        <button id="closeBtn" class="btn btn-outline btn-secondary">
+        <button id="closeBtn" class="btn btn-outline btn-secondary float">
           <%= t('.close') %>
+        </button>
+        <button id="closeBtn" class="btn btn-outline btn-secondary">
+          <%= link_to (t 'defaults.show'), restaurant_path(@random_select.id) %>
         </button>
       </div>
         <div class="garagara-result fadeUp" >

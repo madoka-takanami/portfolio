@@ -1,6 +1,30 @@
-
-<div class="media">
+<div class="media mt-3">
   <div class="flex justify-center">
-    <p>トップページ</p>
+    <div class="text-box text-sm font">
+      <p>ご飯食べに行こう！となっても、</p>
+      <p>店選び、場所選びって面倒ではないですか？</p><br>
+      <p class="font-bold">そんなときは、がらがらぽんで決めてしまおう！</p>
+      <p>というサービスです。</p>
+    </div>
   </div>
+
+    <div class="text-xs font-bold mt-1">
+      <div class="circle-1">
+        <span>気になるお店を手軽にメモできる</span>
+      </div>
+      <div class="circle-2">
+        <span>みんなの気になるお店をチェック</span>
+      </div>
+      <div class="circle-3">
+        <span>他人の行きたい店に先に行ってみる</span>
+      </div>
+    </div>
+
+    <div class="text-center flex justify-center mt-10">
+      <%= image_tag 'color.png',size: '150x750', alt: "womanの画像"  %>
+    </div>
+    <div class="text-center flex justify-center mt-5">
+    <%= link_to (t '.start_login'), new_user_path, class: "btn btn-secondary text-center mr-1" %>
+    <%= link_to (t 'defaults.login'), login_path, class: "btn btn-secondary text-center" %>
+    </div>
 </div>
