@@ -1,14 +1,15 @@
-function previewImage() {
-  const target = this.event.target;
-  const file = target.files[0];
-  const reader = new FileReader();
-  reader.onloadend = function () {
-    const preview = document.querySelector("#preview")
-    if (preview) {
-      preview.src = reader.result;
-    }
-  }
-  if (file) {
-    reader.readAsDataURL(file);
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('avatar-view').addEventListener(
+    'change', (obj) => previewImage(obj)
+  )
+});
+
+function previewImage(obj) {
+  var fileReader = new FileReader();
+  fileReader.onload = (function () {
+    document.getElementById('preview').src = fileReader.result;
+  });
+  console.log(obj)
+  console.log(obj.files)
+  fileReader.readAsDataURL(obj.currentTarget.files[0]);
 }

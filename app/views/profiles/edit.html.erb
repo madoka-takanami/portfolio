@@ -1,22 +1,23 @@
-<% content_for(:title, (t '.title')) %>
+<%= javascript_pack_tag 'image.js' %>
 <div class="flex justify-evenly">
-  <%= form_with model: @user, url: profile_path, local: true  do |f| %>
+  <%= form_with model: @user, id: 'edit_profile', url: profile_path, local: true  do |f| %>
     <%= render 'shared/error_message', object: f.object %>
       <table class="table">
       <tr>
-        <th>
-          <div class="avatar">
-            <div class="w-24 rounded-xl">
-              <%= image_tag @user.avatar.url, id: 'preview' %>
+        <div class="image-field">
+          <th>
+            <div class="avatar">
+              <div class="w-24 rounded-xl">
+                <%= image_tag @user.avatar.url, id: 'preview' %>
+              </div>
             </div>
-          </div>
-        </th>
-        <td>
-          <%= f.file_field :avatar, onchange: 'previewImage(preview)',
-                                    accept: 'image/*',
-                                    class: "file-input file-input-bordered w-full file-input-sm" %>
-          <%= f.hidden_field :avatar_cache %>
-        </td>
+          </th>
+          <td>
+            <%= f.file_field :avatar, id: 'avatar-view',
+                                      class: "file-input file-input-bordered w-full file-input-sm" %>
+            <%= f.hidden_field :avatar_cache %>
+          </td>
+        </div>
       </tr>
         <tr>
           <th class="text-sm"><%= f.label :email %></th>
@@ -53,4 +54,3 @@
       </div>
   <% end %>
 </div>
-<%= javascript_pack_tag 'image.js' %>
