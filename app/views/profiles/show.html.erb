@@ -28,17 +28,6 @@
       </tr>
 
       <tr>
-        <th class="text-sm m-1"><%= t(User.human_attribute_name(:notion)) %></th>
-        <td>
-          <% if current_user.notion == true %>
-            <p>ON</p>
-          <% else %>
-            <p>OFF</p>
-          <% end %>
-        </td>
-      </tr>
-
-      <tr>
         <th class="text-sm m-1"><%= t(User.human_attribute_name(:introduction)) %></th>
         <td><p class="coment"><%= current_user.introduction %></p></td>
       </tr>
