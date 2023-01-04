@@ -9,7 +9,5 @@ function previewImage(obj) {
   fileReader.onload = (function () {
     document.getElementById('preview').src = fileReader.result;
   });
-  console.log(obj)
-  console.log(obj.files)
   fileReader.readAsDataURL(obj.currentTarget.files[0]);
 }
