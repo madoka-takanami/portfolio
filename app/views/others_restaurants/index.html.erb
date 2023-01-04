@@ -2,7 +2,7 @@
   <%= render 'shared/search_form', q: @other_list, url: others_restaurants_path %>
   <%= render 'random_select' %>
     <% if @restaurants.any? %>
-      <%= render @restaurants %>
+      <div class="btm-space"><%= render @restaurants %></div>
     <% else %>
       <p><%= t('.not_have_lists') %></p>
     <% end %>

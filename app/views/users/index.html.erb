@@ -1,32 +1,34 @@
 <% content_for(:title,(t '.title')) %>
-<div class="flex justify-center">
-  <table class="table">
-    <% if @users.any? %>
-      <% @users.each do |user| %>
-        <tr>
-          <td>
-            <div class="avatar">
-              <div class="rounded-full w-14 ring ring-neutral">
-                <%= image_tag user.avatar.url, alt: t('.icon') %>
-              </div>
-            </div>
-          </td>
-
+<div class="btm-space">
+  <div class="flex justify-center">
+    <table class="table">
+      <% if @users.any? %>
+        <% @users.each do |user| %>
+          <tr>
             <td>
-              <div class="flex flex-row place-content-between">
-                <div class="font-bold text-lg"><%= user.name %></div>
-                <div class="cell text-xs"><%= user.generation_i18n %></div>
-              </div>
-            <p class="coment"><%= user.introduction %></p>
-                <div class="flex flex-row mt-2">
-                  <%= link_to (t 'defaults.show'), user_path(user.id), class: "btn btn-secondary btn-sm btn-mid mr-1" %>
-                  <div id="js-follow-button-<%= user.id %>"><%= render 'follow_button', user: user %></div>
+              <div class="avatar">
+                <div class="rounded-full w-14 ring ring-neutral">
+                  <%= image_tag user.avatar.url, alt: t('.icon') %>
                 </div>
+              </div>
             </td>
-        </tr>
+
+              <td>
+                <div class="flex flex-row place-content-between">
+                  <div class="font-bold text-lg"><%= user.name %></div>
+                  <div class="cell text-xs"><%= user.generation_i18n %></div>
+                </div>
+              <p class="coment"><%= user.introduction %></p>
+                  <div class="flex flex-row mt-2">
+                    <%= link_to (t 'defaults.show'), user_path(user.id), class: "btn btn-secondary btn-sm btn-mid mr-1" %>
+                    <div id="js-follow-button-<%= user.id %>"><%= render 'follow_button', user: user %></div>
+                  </div>
+              </td>
+          </tr>
+        <% end %>
+      <% else %>
+        <p><%= t('message.not_registed', item: User.model_name.human) %></p>
       <% end %>
-    <% else %>
-      <p><%= t('message.not_registed', item: User.model_name.human) %></p>
-    <% end %>
-  </table>
+    </table>
+  </div>
 </div>

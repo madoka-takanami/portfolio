@@ -3,9 +3,10 @@
   <%= render 'random_select' %>
     <% if @restaurants.any? %>
       <%= render 'small_new' %>
-      <%= render @restaurants %>
+      <div class="btm-space"><%= render @restaurants %></div>
     <% else %>
       <p class="text-center"><%= t('.not_have_lists') %></p>
       <%= render 'small_new' %>
     <% end %>
+
     <%= javascript_pack_tag 'random_select' %>
