@@ -1,0 +1,22 @@
+<footer>
+  <div class="btn-disabled">
+    <div class="btm-nav btm-nav-lg media">
+      <%= link_to new_restaurant_path do %>
+        <i class="fa-solid fa-pen-to-square"></i>
+        <p class="text-xs"><%= (t 'footer.memo') %></p>
+      <% end %>
+      <%= link_to users_path do %>
+        <i class="fa-solid fa-children"></i>
+        <p class="text-xs"><%= (t 'footer.user') %></p>
+      <% end %>
+      <%= link_to users_path(follow: "marked") do %>
+        <i class="fa-solid fa-user-secret"></i>
+        <p class="text-xs"><%= (t 'footer.follow') %></p>
+      <% end %>
+      <%= link_to profile_path do %>
+        <i class="fa-solid fa-circle-user"></i>
+        <p class="text-xs"><%= (t 'footer.profile') %></p>
+      <% end %>
+    </div>
+  </div>
+</footer>

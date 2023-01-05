@@ -2,6 +2,7 @@ ja:
   defaults:
     title: 'がらぽんごはん'
     restaurants_list: 'みんなのリスト'
+    my_list: "マイリスト"
     login: 'ログイン'
     logout: 'ログアウト'
     register: '登録'
@@ -96,3 +97,10 @@ ja:
   top:
     index:
       start_login: '登録してはじめる'
+  regulation_pages:
+    terms_of_service:
+      title: "利用規約"
+    privacy_policy:
+      title: "プライバシーポリシー"
+    inquiry:
+      title: "お問い合わせ"

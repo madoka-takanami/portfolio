@@ -9,7 +9,7 @@
 
     <div class="navbar-end">
       <%= link_to (t 'defaults.restaurants_list'), others_restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
-      <%= link_to 'マイリスト', restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
+      <%= link_to (t 'defaults.my_list'), restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
       <%= link_to login_path, method: :delete do %>
         <i class="fa-solid fa-right-from-bracket"></i>
       <% end %>

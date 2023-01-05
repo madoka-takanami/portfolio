@@ -21,7 +21,9 @@
     <%= render 'shared/flash_message' %>
     <%= yield %>
     <% if logged_in? %>
-    <%= render 'shared/footer'%>
+      <%= render 'shared/footer' %>
+    <% else %>
+      <%= render 'shared/pre_login_footer' %>
     <% end %>
   </body>
 </html>
