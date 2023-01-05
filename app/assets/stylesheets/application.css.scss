@@ -16,10 +16,6 @@
 @charset 'UTF-8';
 @import "font-awesome";
 
-// p {
-//  width: 200px;
-//}
-
 .btn-mid {
   width: 7rem;
 }
@@ -41,4 +37,12 @@ p.font-sm {
 
 .head-z {
   z-index: 30;
+}
+
+.foot {
+  margin-top: 4rem;
+  bottom: 6rem;
+  background-color: #f6cfb3;
+  width: 100%;
+  max-width: 420px;
 }
