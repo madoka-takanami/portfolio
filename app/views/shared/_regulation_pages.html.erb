@@ -1,10 +1,5 @@
-<div class="media foot">
-  <div class="grid grid-flow-col">
-    <%= link_to '利用規約', terms_of_service_path, class: "link link-hover" %>
-    <a class="link link-hover">プライバシーポリシー</a>
-    <a class="link link-hover">お問合せ</a>
-  </div>
-  <div>
-    <p>Copyright © 2023 がらぽんごはん</p>
-  </div>
-</div>
+<ul class="media regulation text-sm">
+  <li><%= link_to '利用規約', terms_of_service_path, class: "link link-hover" %></li>
+  <li><%= link_to 'プライバシーポリシー', privacy_policy_path, class: "link link-hover" %></li>
+  <li>Copyright © 2023 がらぽんごはん</li>
+</ul>
