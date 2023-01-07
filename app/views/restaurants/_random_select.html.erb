@@ -11,9 +11,11 @@
         <button id="closeBtn" class="btn btn-outline btn-secondary float">
           <%= t('.close') %>
         </button>
-        <button id="closeBtn" class="btn btn-outline btn-secondary">
-          <%= link_to (t 'defaults.show'), restaurant_path(@random_select.id) %>
-        </button>
+          <% if @random_select %>
+            <button id="closeBtn" class="btn btn-outline btn-secondary">
+                <%= link_to (t 'defaults.show'), restaurant_path(@random_select.id) %>
+            </button>
+          <% end %>
       </div>
         <div class="garagara-result fadeUp" >
           <% if @random_select %>
