@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    if @user.update(user_params)
+    @user = User.new(user_params)
+    if @user.save
       flash[:success] = t('message.success')
       redirect_to login_url
     else
