@@ -1,5 +1,9 @@
 class CreateUsers < ActiveRecord::Migration[6.1]
   def change
-    add_column :users, :name, :string, null: false
+    create_table :users do |t|
+      t.string :name, null: false
+
+      t.timestamps
+    end
   end
 end
