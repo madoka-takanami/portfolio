@@ -13,6 +13,9 @@
     "webpack-cli": "^3.3.12"
   },
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.8",
     "postcss": "^8.4.19",
@@ -20,6 +23,8 @@
     "webpack-dev-server": "^3"
   },
   "scripts": {
+    "start": "node index.js",
+    "build": "webpack",
     "dev": "tailwindcss -i tailwind_input.css -o app/assets/stylesheets/tailwind_dist.css --watch"
   }
 }
