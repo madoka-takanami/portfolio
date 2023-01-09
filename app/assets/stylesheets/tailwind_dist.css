@@ -2228,16 +2228,20 @@ html {
   margin-bottom: 1rem;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .ml-5 {
   margin-left: 1.25rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mt-2 {
@@ -2246,6 +2250,10 @@ html {
 
 .mb-7 {
   margin-bottom: 1.75rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mr-0 {
@@ -2278,30 +2286,6 @@ html {
 
 .mr-1 {
   margin-right: 0.25rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
-}
-
-.ml-7 {
-  margin-left: 1.75rem;
-}
-
-.ml-9 {
-  margin-left: 2.25rem;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
 }
 
 .inline {
@@ -2342,10 +2326,6 @@ html {
 
 .table-fixed {
   table-layout: fixed;
-}
-
-.list-disc {
-  list-style-type: disc;
 }
 
 .list-decimal {
