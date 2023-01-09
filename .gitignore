@@ -38,4 +38,3 @@ yarn-debug.log*
 
 /.env
 /public/uploads
-/app/assets/stylesheets/tailwind_dist.css

@@ -23,8 +23,6 @@
     "webpack-dev-server": "^3"
   },
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack",
     "dev": "tailwindcss -i tailwind_input.css -o app/assets/stylesheets/tailwind_dist.css --watch"
   }
 }
