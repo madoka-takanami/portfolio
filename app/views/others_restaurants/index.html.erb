@@ -4,6 +4,6 @@
     <% if @restaurants.any? %>
       <div class="btm-space"><%= render @restaurants %></div>
     <% else %>
-      <p><%= t('.not_have_lists') %></p>
+      <p class="text-center"><%= t('.not_have_lists') %></p>
     <% end %>
     <%= javascript_pack_tag 'random_select' %>
