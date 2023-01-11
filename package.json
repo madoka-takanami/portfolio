@@ -9,7 +9,8 @@
     "autoprefixer": "^9.8.8",
     "postcss": "^8.4.19",
     "tailwindcss": "^3.2.4",
-    "webpack-dev-server": "^3"
+    "webpack-dev-server": "^3",
+    "@rails/webpacker": "5.2.1"
   },
   "scripts": {
     "dev": "tailwindcss -i tailwind_input.css -o app/assets/stylesheets/tailwind_dist.css --watch"
