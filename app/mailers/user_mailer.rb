@@ -9,7 +9,7 @@ class UserMailer < ApplicationMailer
   def notion_email
     @user = User.where(notion: true).shuffle.first
     @restaurant = @user.restaurants.shuffle.first
-    @url = 'from@example.com'
+    @url = 'takanami.mm@gmail.com'
     mail(to: @user.email, subject: 'がらぽんごはん')
   end
 end
