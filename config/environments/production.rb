@@ -98,10 +98,12 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = {host: 'http://garapon-gohan.herokuapp.com' }
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-  :user_name      => 'apikey',
+  :user_name      => 'takanami.mm@gmail.com',
   :password       => ENV['SENDGRID_API_KEY'],
   :domain => 'herokuapp.com',
   :address => 'smtp.sendgrid.net',
