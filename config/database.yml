@@ -80,7 +80,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
   adapter: postgresql
   encoding: unicode
   pool: 5
+  database: garapon-gohan_production
+  username: garapon-gohan
+  password: <%= ENV['SENDMAILTEST_DATABASE_PASSWORD'] %>
