@@ -6,9 +6,6 @@ class PasswordResetsController < ApplicationController
   def create
     @user = User.find_by(email: params[:email])
 
-    puts "user_name+++++++++++++++++++++++;"
-    puts ENV['USER_NAME']
-    puts ENV['SENDGRID_API_KEY']
     @user.deliver_reset_password_instructions! if @user
     redirect_to login_path
     flash[:success] = (t '.sent_email')
