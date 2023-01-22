@@ -103,7 +103,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-  :user_name      => 'takanami.mm@gmail.com',
+  :user_name      => ENV['USER_NAME'],
   :password       => ENV['SENDGRID_API_KEY'],
   :domain => 'herokuapp.com',
   :address => 'smtp.sendgrid.net',
