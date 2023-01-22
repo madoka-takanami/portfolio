@@ -6,8 +6,8 @@ class PasswordResetsController < ApplicationController
   def create
     @user = User.find_by(email: params[:email])
 
-    puts "@user ========"
-    puts @user.as_json
+    puts "user_name+++++++++++++++++++++++;"
+    puts ENV['USER_NAME']
     @user.deliver_reset_password_instructions! if @user
     redirect_to login_path
     flash[:success] = (t '.sent_email')
