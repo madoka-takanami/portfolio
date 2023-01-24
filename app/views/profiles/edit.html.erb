@@ -1,4 +1,5 @@
 <% content_for(:title, (t '.title')) %>
+<% set_meta_tags noindex: true %>
 <div class="flex justify-evenly">
   <%= form_with model: @user, id: 'edit_profile', url: profile_path, local: true  do |f| %>
     <%= render 'shared/error_message', object: f.object %>
