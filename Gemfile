@@ -67,6 +67,7 @@ gem 'enum_help'
 gem 'font-awesome-sass'
 gem 'geocoder'
 gem 'google_places'
+gem 'meta-tags'
 gem "mini_magick"
 gem 'net-smtp'
 gem 'net-imap'
