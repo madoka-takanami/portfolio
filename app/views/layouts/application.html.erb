@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html data-theme="mytheme">
   <head>
-    <% set_meta_tags(
-      site: "がらぽんごはん",
-      description: "ご飯食べに行こう！となっても、店選び、場所選びって面倒ではないですか？そんなときは、がらがらぽんで決めてしまおう！というサービスです。",
-      keywords: "がらぽんごはん, ごはん, 面倒"
-      )
-    %>
     <title><%= page_title(yield(:title)) %></title>
     <meta charset="UTF-8">
+    <%= display_meta_tags site: "がらぽんごはん" %>
+    <% description "ご飯食べに行こう！となっても、店選び、場所選びって面倒ではないですか？そんなときは、がらがらぽんで決めてしまおう！というサービスです。" %>
+    <% keywords "がらぽんごはん,ごはん,面倒" %>
     <%= favicon_link_tag('garagara_top.png') %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
