@@ -29,12 +29,12 @@ class User < ApplicationRecord
   def follow(user_id)
     active_relationship.build(followed_id: user_id)
   end
-# この中からあることを探す↓
+
   def unfollow(user_id)
     follow = self.active_relationship.find_by(user_id)
     follow.destroy
   end
-# 直接値をとりに行く↓
+
   def following?(user_id)
     following.include?(user_id)
   end
