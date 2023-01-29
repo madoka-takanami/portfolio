@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'users#index'
+  root to: 'top#index'
 
   resources :users, only: %i[new create index show] do
     resources :relationships, only: %i[create destroy]
