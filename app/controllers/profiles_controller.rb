@@ -5,10 +5,7 @@ class ProfilesController < ApplicationController
   def edit; end
 
   def update
-    if guest?
-      flash[:warning] = t('message.prohibit_guest', item: '更新')
-      render :edit
-    elsif @user.update(user_params)
+    if @user.update(user_params)
       redirect_to profile_path
       flash[:success] = t('message.success')
     else
