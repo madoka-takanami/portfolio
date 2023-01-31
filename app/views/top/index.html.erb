@@ -26,8 +26,11 @@
       <%= image_tag 'color.png',size: '120x650', alt: "womanの画像" %>
     </div>
     <div class="flex justify-center mt-3">
-    <%= link_to (t '.start_login'), new_user_path, class: "btn btn-secondary text-center mr-1" %>
-    <%= link_to (t 'defaults.login'), login_path, class: "btn btn-secondary text-center" %>
+      <%= link_to (t '.start_login'), new_user_path, class: "btn btn-secondary text-center mr-1" %>
+      <%= link_to (t 'defaults.login'), login_path, class: "btn btn-secondary text-center" %>
+    </div>
+    <div class="flex justify-center mt-2">
+      <%= link_to (t '.start_as_guest'), guest_path, method: :post, class: "btn btn-secondary text-center btn-wide" %>
     </div>
   <%= render 'shared/regulation_pages' %>
   <div class="btm-space"></div>

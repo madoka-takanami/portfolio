@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'guest/create'
   root to: 'top#index'
 
   resources :users, only: %i[new create index show] do
@@ -24,5 +25,7 @@ Rails.application.routes.draw do
   get 'terms_of_service', to: 'regulation_pages#terms_of_service'
   get 'privacy_policy', to: 'regulation_pages#privacy_policy'
   get 'inquiry', to: 'regulation_pages#inquiry'
+
+  post 'guest', to: 'guest#create'
 
 end
