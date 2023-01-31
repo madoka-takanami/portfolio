@@ -13,10 +13,12 @@
           </td>
       </tr>
 
+    <% unless guest? %>
       <tr>
         <th class="text-sm m-1"><%= t(User.human_attribute_name(:email)) %></th>
         <td><%= current_user.email %></td>
       </tr>
+    <% end %>
 
       <tr>
         <th class="text-sm m-1"><%= t(User.human_attribute_name(:name)) %></th>
