@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   end
 
   def guest?
-    User.find(current_user.id) == User.find_by(email: ENV['GUEST_MAIL'])
+    User.find(current_user.id) == User.find_by(email: "guest_gets@example.com")
   end
 end
