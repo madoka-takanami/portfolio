@@ -19,7 +19,7 @@
 <%= javascript_pack_tag 'spots_new.js' %>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['SECRET_KEY']%>&callback&callback=initMap&libraries=places" async defer></script>
 
-  <div class="flex justify-center mt-2">
+  <div class="flex justify-center mt-2 btm-space">
     <%= form_with model: @spot, local: true do |f| %>
       <%= render 'shared/error_message', object: f.object %>
         <%= f.text_field :address, id: "address", value:"", placeholder: t('.tap_the_map'), class: "input input-bordered input-primary max-w-xs" %>
