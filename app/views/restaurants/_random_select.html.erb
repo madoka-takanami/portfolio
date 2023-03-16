@@ -7,16 +7,6 @@
 <div id="modal" class="modal">
   <div class="modal-content">
     <div class="modal-body">
-      <div class="modal-close-btn">
-        <button id="closeBtn" class="btn btn-outline btn-secondary float">
-          <%= t('.close') %>
-        </button>
-          <% if @random_select %>
-            <button id="closeBtn" class="btn btn-outline btn-secondary">
-                <%= link_to (t 'defaults.show'), restaurant_path(@random_select.id) %>
-            </button>
-          <% end %>
-      </div>
         <div class="garagara-result fadeUp" >
           <% if @random_select %>
               <p class="font-sm"><%= t('.how_is_this?') %></p>
@@ -25,6 +15,16 @@
             <%= t('message.not_registed', item: Restaurant.model_name.human) %>
           <% end %>
         </div>
+            <div class="modal-close-btn flex justify-center">
+              <button id="closeBtn" class="btn btn-secondary btn-mid btn-outline">
+                <%= t('.close') %>
+              </button>
+              <% if @random_select %>
+                <button id="closeBtn" class="btn btn-secondary btn-mid btn-outline">
+                  <%= link_to (t 'defaults.show'), restaurant_path(@random_select.id) %>
+                </button>
+              <% end %>
+            </div>
       <div class="flex justify-center" >
         <%= video_tag "garagara.mp4", autoplay: true, muted: true %>
       </div>
