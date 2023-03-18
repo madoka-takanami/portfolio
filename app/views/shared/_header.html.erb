@@ -1,18 +1,49 @@
 <div class="col-right"></div>
 <div class="col-left"></div>
 
-<div class="justify-evenly media sticky top-0 head-z">
-  <div class="navbar bg-base-100">
-    <div class="flex-1">
-      <p class="font-sm"><%= link_to (t 'defaults.title') %><p>
-    </div>
+<div class="justify-evenly sticky top-0 head-z h-center">
+  <div class="bg-base-100">
+      <p class="font-xs"><%= link_to (t 'defaults.title') %><p>
+    <div class="flex h-center">
+      <div class="flex-row mb-5">
+        <%= link_to (t 'defaults.restaurants_list'), others_restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
+        <%= link_to (t 'defaults.my_list'), restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
 
-    <div class="navbar-end">
-      <%= link_to (t 'defaults.restaurants_list'), others_restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
-      <%= link_to (t 'defaults.my_list'), restaurants_path, class: "btn btn-sm btn-primary mr-0.5 text-xs" %>
-      <%= link_to login_path, method: :delete do %>
-        <i class="fa-solid fa-right-from-bracket"></i>
+      <%= link_to new_restaurant_path do %>
+        <div class="btn btn-sm btn-primary mr-0.5 text-xs media-smh-head">
+          <i class="fa-solid fa-pen-to-square mr-1"></i>
+          <p class="text-xs"><%= (t 'footer.memo') %></p>
+        </div>
       <% end %>
+
+        <%= link_to users_path do %>
+          <div class="btn btn-sm btn-primary mr-0.5 text-xs media-smh-head">
+            <i class="fa-solid fa-children mr-1"></i>
+            <p class="text-xs"><%= (t 'footer.user') %></p>
+          </div>
+        <% end %>
+
+        <%= link_to users_path(follow: "marked") do %>
+          <div class="btn btn-sm btn-primary mr-0.5 text-xs media-smh-head">
+            <i class="fa-solid fa-user-secret mr-1"></i>
+            <p class="text-xs"><%= (t 'footer.follow') %></p>
+          </div>
+        <% end %>
+
+        <%= link_to profile_path do %>
+          <div class="btn btn-sm btn-primary mr-0.5 text-xs media-smh-head">
+            <i class="fa-solid fa-circle-user mr-1"></i>
+            <p class="text-xs"><%= (t 'footer.profile') %></p>
+          </div>
+        <% end %>
+
+      <%= link_to login_path, method: :delete do %>
+        <div class="btn btn-sm btn-primary mr-0.5 text-xs">
+          <i class="fa-solid fa-right-from-bracket mr-1"></i>
+          <p><%= (t 'defaults.logout') %></p>
+        </div>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

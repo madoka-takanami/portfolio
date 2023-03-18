@@ -4,7 +4,7 @@ class GuestController < ApplicationController
   def create
     guest = User.find_by(email: "guest_gets@example.com")
     auto_login(guest)
-    redirect_to restaurants_path
+    redirect_to others_restaurants_path
     flash[:success] = t('.login_as_guest')
   end
 end

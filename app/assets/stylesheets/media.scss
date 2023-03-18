@@ -16,6 +16,11 @@
   width: 80%;
 }
 
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+
 .media {
   width: 100%;
   max-width: 420px;
@@ -25,7 +30,19 @@
   align-items: center;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 420px) {
+  .media-smh {
+    display: none;
+  }
+}
+
+@media (max-width: 421px) {
+  .media-smh-head {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
   .col-right {
     width: 14rem;
     white-space: pre-wrap;
@@ -38,9 +55,7 @@
     background-image: url(back.png);
     background-size: contain;
   }
-}
 
-@media (min-width: 900px) {
   .col-left {
     width: 14rem;
     white-space: pre-wrap;
